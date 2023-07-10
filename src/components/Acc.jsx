@@ -1,4 +1,4 @@
-import "./acc.scss";
+import "./acc.css";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { motion, animate, AnimatePresence } from "framer-motion";
 import { AiFillCaretDown } from "react-icons/ai";

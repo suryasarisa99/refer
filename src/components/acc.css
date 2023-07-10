@@ -1,21 +1,39 @@
 * {
   padding: 0;
   margin: 0px;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   font-family: "Fira Code";
   color: white;
 }
 
 .acc {
   max-width: 450px;
+  background-color: black;
   margin: 0px auto;
   border: 1px solid rgb(27, 27, 27);
   margin-bottom: 4px;
 }
 
+.acc-head {
+  position: relative;
+  background-color: black;
+}
+.acc-head .secondary-head {
+  position: absolute;
+  right: 12px;
+  top: 6px;
+  font-size: 14px;
+}
+.acc-head .secondary-head .lang-type {
+  color: rgb(255, 39, 197);
+}
+.acc-head .secondary-head .group-type {
+  color: rgb(99, 255, 72);
+}
 .acc-head .head {
   font-size: 18px;
   padding: 10px 15px;
@@ -24,14 +42,157 @@ body {
 .acc-body {
   padding: 15px;
   padding-top: 20px;
+  background-color: black;
+}
+.acc-body .keypoints {
+  margin: 20px 0;
 }
 
-.code {
-  background-color: black;
-  font-size: 32px;
+.syntax-box {
+  margin-bottom: 15px;
+}
+.syntax-box .syntax-title {
+  margin-bottom: 10px;
+}
+
+.syntax {
+  background-color: rgb(44, 44, 44);
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+}
+.syntax .return-type {
+  color: rgb(244, 35, 255);
+}
+.syntax .bracket {
+  color: yellow;
+}
+.syntax .function {
+  color: rgb(101, 101, 255);
+}
+.syntax .parameter-type {
+  color: rgb(225, 73, 180);
+}
+.syntax::-webkit-scrollbar {
+  width: 0.5em; /* Adjust as needed */
+}
+
+.syntax::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.syntax::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.25em;
 }
 
 @font-face {
   font-family: "FiraCode-Medium.ttf";
   src: local("FiraCode"), url("../fonts/FiraCode-Medium.ttf") format("truetype");
+}
+.search-icon {
+  position: absolute;
+  top: 12px;
+  color: rgb(142, 142, 142);
+}
+
+.app {
+  background-color: black;
+}
+
+.search-bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-bar .sb {
+  background-color: rgb(42, 41, 41);
+  border-radius: 8px;
+  width: 90%;
+  margin: 10px auto;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  padding: 10px;
+  color: white;
+  outline: none;
+  padding-left: 50px;
+}
+.search-bar .search-icon {
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.item {
+  padding: 8px 14px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(99, 99, 99, 0.7098039216);
+  background-color: black;
+  font-size: 19px;
+}
+
+.home {
+  margin-top: 40px;
+}
+.home .lang {
+  padding: 10px 24px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(162, 162, 162, 0.7098039216);
+  font-size: 20px;
+}
+
+code {
+  font-family: "Fira Code";
+}
+code .code {
+  font-family: "Fira Code";
+}
+
+.output-box {
+  margin: 10px auto;
+  margin-bottom: 30px;
+}
+.output-box .output-title {
+  margin-bottom: 8px;
+}
+.output-box .output {
+  padding: 8px 12px;
+  background-color: rgb(25, 25, 31);
+  color: rgb(246, 128, 64);
+  border-radius: 8px;
+}
+
+.arrow-down {
+  color: rgb(93, 93, 92);
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+.arrow-right {
+  color: rgb(92, 92, 92);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lang-page {
+  margin-top: 20px;
 }/*# sourceMappingURL=acc.css.map */
