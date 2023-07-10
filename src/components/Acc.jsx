@@ -23,13 +23,6 @@ export default ({ data, state, index, onClick, lang, group }) => {
           <div className="title">
             {index} {data.name}
           </div>
-          {/* {index == state ? (
-            <AiFillCaretDown className="arrow-down" />
-          ) : (
-            <motion.div initial={{ rotate: -90 }}>
-              <AiFillCaretDown className="arrow-right" />
-            </motion.div>
-          )} */}
         </div>
       </div>
       <AnimatePresence>

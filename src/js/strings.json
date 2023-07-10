@@ -1,0 +1,423 @@
+[
+  {
+    "name": "charAt()",
+    "syntax": "str.charAt(index)",
+    "description": "Returns the character at the specified index in a string.",
+    "examples": [
+      {
+        "example": "const str = 'Hello';\nconsole.log(str.charAt(1));",
+        "output": "e"
+      },
+      {
+        "example": "const str = 'World';\nconsole.log(str.charAt(3));",
+        "output": "l"
+      }
+    ]
+  },
+  {
+    "name": "charCodeAt()",
+    "syntax": "str.charCodeAt(index)",
+    "description": "Returns the Unicode value of the character at the specified index in a string.",
+    "examples": [
+      {
+        "example": "const str = 'Hello';\nconsole.log(str.charCodeAt(1));",
+        "output": "101"
+      },
+      {
+        "example": "const str = 'World';\nconsole.log(str.charCodeAt(3));",
+        "output": "108"
+      }
+    ]
+  },
+  {
+    "name": "concat()",
+    "syntax": "str.concat(string2, string3, ..., stringX)",
+    "description": "Concatenates two or more strings and returns a new string.",
+    "examples": [
+      {
+        "example": "const str1 = 'Hello';\nconst str2 = 'World';\nconsole.log(str1.concat(' ', str2));",
+        "output": "Hello World"
+      },
+      {
+        "example": "const str1 = 'Open';\nconst str2 = 'AI';\nconsole.log(str1.concat('-', str2));",
+        "output": "Open-AI"
+      }
+    ]
+  },
+  {
+    "name": "endsWith()",
+    "syntax": "str.endsWith(searchString, length)",
+    "description": "Checks if a string ends with the specified substring.",
+    "examples": [
+      {
+        "example": "const str = 'Hello World';\nconsole.log(str.endsWith('World'));",
+        "output": "true"
+      },
+      {
+        "example": "const str = 'OpenAI';\nconsole.log(str.endsWith('AI'));",
+        "output": "true"
+      }
+    ]
+  },
+  {
+    "name": "fromCharCode()",
+    "syntax": "String.fromCharCode(char1, char2, ..., charX)",
+    "description": "Returns a string created by converting the specified Unicode values to characters.",
+    "examples": [
+      {
+        "example": "console.log(String.fromCharCode(65, 66, 67));",
+        "output": "ABC"
+      },
+      {
+        "example": "console.log(String.fromCharCode(72, 101, 108, 108, 111));",
+        "output": "Hello"
+      }
+    ]
+  },
+  {
+    "name": "includes()",
+    "syntax": "str.includes(searchString, position)",
+    "description": "Checks if a string contains the specified substring.",
+    "examples": [
+      {
+        "example": "const str = 'Hello World';\nconsole.log(str.includes('World'));",
+        "output": "true"
+      },
+      {
+        "example": "const str = 'OpenAI';\nconsole.log(str.includes('AI'));",
+        "output": "true"
+      }
+    ]
+  },
+  {
+    "name": "indexOf()",
+    "syntax": "str.indexOf(searchValue, fromIndex)",
+    "description": "Returns the index of the first occurrence of a specified value in a string.",
+    "examples": [
+      {
+        "example": "const str = 'Hello World';\nconsole.log(str.indexOf('o'));",
+        "output": "4"
+      },
+      {
+        "example": "const str = 'OpenAI';\nconsole.log(str.indexOf('AI'));",
+        "output": "4"
+      }
+    ]
+  },
+  {
+    "name": "lastIndexOf()",
+    "syntax": "str.lastIndexOf(searchValue, fromIndex)",
+    "description": "Returns the index of the last occurrence of a specified value in a string.",
+    "examples": [
+      {
+        "example": "const str = 'Hello World';\nconsole.log(str.lastIndexOf('o'));",
+        "output": "7"
+      },
+      {
+        "example": "const str = 'OpenAI';\nconsole.log(str.lastIndexOf('AI'));",
+        "output": "4"
+      }
+    ]
+  },
+  {
+    "name": "localeCompare()",
+    "syntax": "str.localeCompare(compareString)",
+    "description": "Compares two strings in the current locale.",
+    "examples": [
+      {
+        "example": "const str1 = 'Hello';\nconst str2 = 'World';\nconsole.log(str1.localeCompare(str2));",
+        "output": "-1"
+      },
+      {
+        "example": "const str1 = 'Open';\nconst str2 = 'AI';\nconsole.log(str1.localeCompare(str2));",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "name": "match()",
+    "syntax": "str.match(regexp)",
+    "description": "Searches a string for a match against a regular expression and returns the matches.",
+    "examples": [
+      {
+        "example": "const str = 'Hello World';\nconsole.log(str.match(/o/g));",
+        "output": "[ 'o', 'o' ]"
+      },
+      {
+        "example": "const str = 'OpenAI';\nconsole.log(str.match(/AI/g));",
+        "output": "[ 'AI' ]"
+      }
+    ]
+  },
+  {
+    "name": "normalize()",
+    "syntax": "str.normalize(form)",
+    "description": "Returns the Unicode Normalization Form of a given string.",
+    "examples": [
+      {
+        "example": "const str = 'c\u0327';\nconsole.log(str.normalize('NFD'));",
+        "output": "ç"
+      },
+      {
+        "example": "const str = 'A\u030A';\nconsole.log(str.normalize('NFC'));",
+        "output": "Å"
+      }
+    ]
+  },
+  {
+    "name": "padEnd()",
+    "syntax": "str.padEnd(targetLength, padString)",
+    "description": "Pads the end of a string with another string until it reaches the specified length.",
+    "examples": [
+      {
+        "example": "const str = 'Hello';\nconsole.log(str.padEnd(10, ' World'));",
+        "output": "Hello World"
+      },
+      {
+        "example": "const str = 'OpenAI';\nconsole.log(str.padEnd(8, '-'));",
+        "output": "OpenAI--"
+      }
+    ]
+  },
+  {
+    "name": "padStart()",
+    "syntax": "str.padStart(targetLength, padString)",
+    "description": "Pads the start of a string with another string until it reaches the specified length.",
+    "examples": [
+      {
+        "example": "const str = 'Hello';\nconsole.log(str.padStart(10, 'X'));\n// Output: XXXXHello"
+      },
+      {
+        "example": "const str = 'OpenAI';\nconsole.log(str.padStart(8, '-'));\n// Output: --OpenAI"
+      },
+      {
+        "example": "const str = '123';\nconsole.log(str.padStart(6, '0'));\n// Output: 000123"
+      }
+    ]
+  },
+  {
+    "name": "repeat",
+    "syntax": "str.repeat(count)",
+    "description": "Returns a new string which contains the original string repeated the specified number of times.",
+    "examples": [
+      {
+        "example": "'Hello'.repeat(3)",
+        "output": "'HelloHelloHello'"
+      },
+      {
+        "example": "'abc'.repeat(2)",
+        "output": "'abcabc'"
+      }
+    ]
+  },
+  {
+    "name": "replace",
+    "syntax": "str.replace(searchValue, replaceValue)",
+    "description": "Returns a new string where some or all occurrences of a specified value are replaced with another specified value.",
+    "examples": [
+      {
+        "example": "'Hello, World!'.replace('World', 'John')",
+        "output": "'Hello, John!'"
+      },
+      {
+        "example": "'apple, apple, apple'.replace('apple', 'orange')",
+        "output": "'orange, orange, orange'"
+      }
+    ]
+  },
+  {
+    "name": "search",
+    "syntax": "str.search(regexp)",
+    "description": "Searches a string for a specified value or regular expression and returns the index of the first occurrence.",
+    "examples": [
+      {
+        "example": "'Hello, World!'.search('World')",
+        "output": "7"
+      },
+      {
+        "example": "'apple, banana, orange'.search('banana')",
+        "output": "7"
+      }
+    ]
+  },
+  {
+    "name": "slice",
+    "syntax": "str.slice(start, end)",
+    "description": "Extracts a section of a string and returns a new string.",
+    "examples": [
+      {
+        "example": "'Hello, World!'.slice(7)",
+        "output": "'World!'"
+      },
+      {
+        "example": "'apple, banana, orange'.slice(7, 13)",
+        "output": "'banana'"
+      }
+    ]
+  },
+  {
+    "name": "split",
+    "syntax": "str.split(separator)",
+    "description": "Splits a string into an array of substrings based on the specified separator and returns the new array.",
+    "examples": [
+      {
+        "example": "'Hello, World!'.split(', ')",
+        "output": "['Hello', 'World!']"
+      },
+      {
+        "example": "'apple, banana, orange'.split(', ')",
+        "output": "['apple', 'banana', 'orange']"
+      }
+    ]
+  },
+  {
+    "name": "startsWith",
+    "syntax": "str.startsWith(searchValue, position)",
+    "description": "Checks whether a string starts with a specified value and returns true or false.",
+    "examples": [
+      {
+        "example": "'Hello, World!'.startsWith('Hello')",
+        "output": "true"
+      },
+      {
+        "example": "'apple, banana, orange'.startsWith('banana', 7)",
+        "output": "true"
+      }
+    ]
+  },
+  {
+    "name": "substr",
+    "syntax": "str.substr(start, length)",
+    "description": "Extracts characters from a string, beginning at a specified start position, and through the specified number of characters.",
+    "examples": [
+      {
+        "example": "'Hello, World!'.substr(7)",
+        "output": "'World!'"
+      },
+      {
+        "example": "'apple, banana, orange'.substr(7, 6)",
+        "output": "'banana'"
+      }
+    ]
+  },
+  {
+    "name": "substring",
+    "syntax": "str.substring(start, end)",
+    "description": "Extracts characters from a string, between two specified indices, and returns a new string.",
+    "examples": [
+      {
+        "example": "'Hello, World!'.substring(7)",
+        "output": "'World!'"
+      },
+      {
+        "example": "'apple, banana, orange'.substring(7, 13)",
+        "output": "'banana'"
+      }
+    ]
+  },
+  {
+    "name": "toLocaleLowerCase",
+    "syntax": "str.toLocaleLowerCase()",
+    "description": "Returns a new string converted to lowercase according to any locale-specific case mappings.",
+    "examples": [
+      {
+        "example": "'Hello, World!'.toLocaleLowerCase()",
+        "output": "'hello, world!'"
+      },
+      {
+        "example": "'Apple, Banana, Orange'.toLocaleLowerCase()",
+        "output": "'apple, banana, orange'"
+      }
+    ]
+  },
+  {
+    "name": "toLocaleUpperCase",
+    "syntax": "str.toLocaleUpperCase()",
+    "description": "Returns a new string converted to uppercase according to any locale-specific case mappings.",
+    "examples": [
+      {
+        "example": "'Hello, World!'.toLocaleUpperCase()",
+        "output": "'HELLO, WORLD!'"
+      },
+      {
+        "example": "'Apple, Banana, Orange'.toLocaleUpperCase()",
+        "output": "'APPLE, BANANA, ORANGE'"
+      }
+    ]
+  },
+  {
+    "name": "toLowerCase",
+    "syntax": "str.toLowerCase()",
+    "description": "Returns a new string converted to lowercase.",
+    "examples": [
+      {
+        "example": "'Hello, World!'.toLowerCase()",
+        "output": "'hello, world!'"
+      },
+      {
+        "example": "'Apple, Banana, Orange'.toLowerCase()",
+        "output": "'apple, banana, orange'"
+      }
+    ]
+  },
+  {
+    "name": "toString",
+    "syntax": "str.toString()",
+    "description": "Returns a string representing the specified object.",
+    "examples": [
+      {
+        "example": "12345.toString()",
+        "output": "'12345'"
+      },
+      {
+        "example": "true.toString()",
+        "output": "'true'"
+      }
+    ]
+  },
+  {
+    "name": "toUpperCase",
+    "syntax": "str.toUpperCase()",
+    "description": "Returns a new string converted to uppercase.",
+    "examples": [
+      {
+        "example": "'Hello, World!'.toUpperCase()",
+        "output": "'HELLO, WORLD!'"
+      },
+      {
+        "example": "'Apple, Banana, Orange'.toUpperCase()",
+        "output": "'APPLE, BANANA, ORANGE'"
+      }
+    ]
+  },
+  {
+    "name": "trim",
+    "syntax": "str.trim()",
+    "description": "Removes whitespace from both ends of a string and returns a new string.",
+    "examples": [
+      {
+        "example": "'   Hello, World!   '.trim()",
+        "output": "'Hello, World!'"
+      },
+      {
+        "example": "'   Apple, Banana, Orange   '.trim()",
+        "output": "'Apple, Banana, Orange'"
+      }
+    ]
+  },
+  {
+    "name": "valueOf",
+    "syntax": "str.valueOf()",
+    "description": "Returns the primitive value of a String object.",
+    "examples": [
+      {
+        "example": "'Hello, World!'.valueOf()",
+        "output": "'Hello, World!'"
+      },
+      {
+        "example": "String(123).valueOf()",
+        "output": "'123'"
+      }
+    ]
+  }
+]

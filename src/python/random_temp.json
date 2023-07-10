@@ -1,0 +1,189 @@
+
+// {
+//     "random.seed": {
+//     "name": "random.seed",
+//     "syntax": "random.seed(a=None, version=2)",
+//     "description": "Initialize the random number generator.",
+//     "examples": [
+//     "random.seed(10)\nrandom.random()",
+//     "random.seed()\nrandom.random()",
+//     "random.seed(20)\nrandom.random()"
+//     ],
+//     "output": [
+//     "0.5714025946899135",
+//     "0.8444218515250481",
+//     "0.9056396761745207"
+//     ]
+//     },
+//     "random.getstate": {
+//     "name": "random.getstate",
+//     "syntax": "random.getstate()",
+//     "description": "Return an object capturing the current internal state of the generator.",
+//     "examples": [
+//     "random.seed(10)\nstate = random.getstate()\nrandom.random()\nrandom.setstate(state)\nrandom.random()"
+//     ],
+//     "output": [
+//     "0.5714025946899135",
+//     "0.5714025946899135"
+//     ]
+//     },
+//     "random.setstate": {
+//     "name": "random.setstate",
+//     "syntax": "random.setstate(state)",
+//     "description": "Restore the internal state of the generator from the object returned by getstate().",
+//     "examples": [
+//     "random.seed(10)\nstate = random.getstate()\nrandom.random()\nrandom.setstate(state)\nrandom.random()"
+//     ],
+//     "output": [
+//     "0.5714025946899135",
+//     "0.5714025946899135"
+//     ]
+//     },
+//     "random.getrandbits": {
+//     "name": "random.getrandbits",
+//     "syntax": "random.getrandbits(k)",
+//     "description": "Generate an integer with k random bits.",
+//     "examples": [
+//     "random.getrandbits(8)",
+//     "random.getrandbits(16)",
+//     "random.getrandbits(32)"
+//     ],
+//     "output": [
+//     "136",
+//     "41657",
+//     "1869761917"
+//     ]
+//     },
+//     "random.randrange": {
+//     "name": "random.randrange",
+//     "syntax": "random.randrange(stop)",
+//     "description": "Return a randomly selected element from range(start, stop, step).",
+//     "examples": [
+//     "random.randrange(10)",
+//     "random.randrange(0, 100, 10)",
+//     "random.randrange(1, 7, 2)"
+//     ],
+//     "output": [
+//     "7",
+//     "40",
+//     "5"
+//     ]
+//     },
+//     "random.randint": {
+//     "name": "random.randint",
+//     "syntax": "random.randint(a, b)",
+//     "description": "Return a random integer N such that a <= N <= b.",
+//     "examples": [
+//     "random.randint(0, 10)",
+//     "random.randint(-100, 100)",
+//     "random.randint(1, 6)"
+//     ],
+//     "output": [
+//     "7",
+//     "-60",
+//     "5"
+//     ]
+//     },
+//     "random.getrandbits": {
+//     "name": "random.getrandbits",
+//     "syntax": "random.getrandbits(k)",
+//     "description": "Generate an integer with k random bits.",
+//     "examples": [
+//     "random.getrandbits(8)",
+//     "random.getrandbits(16)",
+//     "random.getrandbits(32)"
+//     ],
+//     "output": [
+//     "136",
+//     "41657",
+//     "1869761917"
+//     ]
+//     },
+//     "random.random": {
+//     "name": "random.random",
+//     "syntax": "random.random()",
+//     "description": "Return the next random floating-point number in the range [0.0, 1.0).",
+//     "examples": [
+//     "random.random()",
+//     "random.random()",
+//     "random.random()"
+//     ],
+//     "output": [
+//     "0.5714025946899135",
+//     "0.8444218515250481",
+//     "0.9056396761745207"
+//     ]
+//     },
+//     "random.uniform": {
+//     "name": "random.uniform",
+//     "syntax": "random.uniform(a, b)",
+//     "description": "Return a random floating-point number N such that a <= N <= b for a <= b and b <= N <= a for b < a.",
+//     "examples": [
+//     "random.uniform(0, 1)",
+//     "random.uniform(-10, 10)",
+//     "random.uniform(1, 6)"
+//     ],
+//     "output": [
+//     "0.7186852252663433",
+//     "0.5134390685784171",
+//     "1.5240823663843522"
+//     ]
+//     },
+//     "random.choice": {
+//     "name": "random.choice",
+//     "syntax": "random.choice(seq)",
+//     "description": "Return a random element from the non-empty sequence seq.",
+//     "examples": [
+//     "random.choice(['apple', 'banana', 'cherry'])",
+//     "random.choice((1, 2, 3, 4, 5))",
+//     "random.choice('hello')"
+//     ],
+//     "output": [
+//     "'banana'",
+//     "3",
+//     "'e'"
+//     ]
+//     },
+//     "random.shuffle": {
+//     "name": "random.shuffle",
+//     "syntax": "random.shuffle(x[, random])",
+//     "description": "Shuffle the sequence x in place.",
+//     "examples": [
+//     "x = [1, 2, 3, 4, 5]\nrandom.shuffle(x)\nx",
+//     "x = ['apple', 'banana', 'cherry']\nrandom.shuffle(x)\nx"
+//     ],
+//     "output": [
+//     "[3, 4, 2, 1, 5]",
+//     "['cherry', 'apple', 'banana']"
+//     ]
+//     },
+//     "random.sample": {
+//     "name": "random.sample",
+//     "syntax": "random.sample(population, k)",
+//     "description": "Return a k-length list of unique elements chosen from the population sequence or set.",
+//     "examples": [
+//     "random.sample([1, 2, 3, 4, 5], 3)",
+//     "random.sample(range(10), 5)",
+//     "random.sample('hello', 2)"
+//     ],
+//     "output": [
+//     "[5, 4, 3]",
+//     "[2, 4, 7, 5, 6]",
+//     "['h', 'o']"
+//     ]
+//     },
+//     "random.choices": {
+//     "name": "random.choices",
+//     "syntax": "random.choices(population, weights=None, *, cum_weights=None, k=1)",
+//     "description": "Return a k-length list of elements chosen from the population with replacement.",
+//     "examples": [
+//     "random.choices(['apple', 'banana', 'cherry'], k=3)",
+//     "random.choices(range(10), k=5)",
+//     "random.choices('hello', k=2)"
+//     ],
+//     "output": [
+//     "['cherry', 'cherry', 'apple']",
+//     "[5, 5, 9, 4, 8]",
+//     "['l', 'o']"
+//     ]
+//     },
