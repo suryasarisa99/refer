@@ -1,0 +1,104 @@
+[
+  {
+    "name": "clear",
+    "syntax": "dictionary.clear()",
+    "description": "Removes all elements from the dictionary.",
+    "examples": [
+      "my_dict = {1: 'apple', 2: 'banana', 3: 'cherry'}\nmy_dict.clear()\nprint(my_dict)"
+    ],
+    "output": ["{}"]
+  },
+  {
+    "name": "copy",
+    "syntax": "dictionary.copy()",
+    "description": "Returns a shallow copy of the dictionary.",
+    "examples": [
+      "my_dict = {1: 'apple', 2: 'banana', 3: 'cherry'}\nnew_dict = my_dict.copy()\nprint(new_dict)"
+    ],
+    "output": ["{1: 'apple', 2: 'banana', 3: 'cherry'}"]
+  },
+  {
+    "name": "fromkeys",
+    "syntax": "dict.fromkeys(sequence[, value])",
+    "description": "Creates a new dictionary with keys from a sequence and values set to a default value.",
+    "examples": [
+      "keys = ['apple', 'banana', 'cherry']\nvalues = 0\ndict1 = dict.fromkeys(keys, values)\nprint(dict1)"
+    ],
+    "output": ["{'apple': 0, 'banana': 0, 'cherry': 0}"]
+  },
+  {
+    "name": "get",
+    "syntax": "dictionary.get(key[, default])",
+    "description": "Returns the value of the specified key. If the key does not exist, it returns None (or a specified default value).",
+    "examples": [
+      "my_dict = {1: 'apple', 2: 'banana', 3: 'cherry'}\nprint(my_dict.get(2))\nprint(my_dict.get(4, 'Not found'))"
+    ],
+    "output": ["'banana'", "'Not found'"]
+  },
+  {
+    "name": "items",
+    "syntax": "dictionary.items()",
+    "description": "Returns a list of key-value pairs in the dictionary.",
+    "examples": [
+      "my_dict = {1: 'apple', 2: 'banana', 3: 'cherry'}\nprint(my_dict.items())"
+    ],
+    "output": ["dict_items([(1, 'apple'), (2, 'banana'), (3, 'cherry')])"]
+  },
+  {
+    "name": "keys",
+    "syntax": "dictionary.keys()",
+    "description": "Returns a list of keys in the dictionary.",
+    "examples": [
+      "my_dict = {1: 'apple', 2: 'banana', 3: 'cherry'}\nprint(my_dict.keys())"
+    ],
+    "output": ["dict_keys([1, 2, 3])"]
+  },
+  {
+    "name": "pop",
+    "syntax": "dictionary.pop(key[, default])",
+    "description": "Removes and returns the value of the specified key. If the key does not exist, it raises a KeyError (or returns a specified default value).",
+    "examples": [
+      "my_dict = {1: 'apple', 2: 'banana', 3: 'cherry'}\npopped_value = my_dict.pop(2)\nprint(popped_value)\nprint(my_dict)"
+    ],
+    "output": ["'banana'", "{1: 'apple', 3: 'cherry'}"]
+  },
+  {
+    "name": "popitem",
+    "syntax": "dictionary.popitem()",
+    "description": "Removes and returns an arbitrary key-value pair from the dictionary. If the dictionary is empty, it raises a KeyError.",
+    "examples": [
+      "my_dict = {1: 'apple', 2: 'banana', 3: 'cherry'}\npopped_item = my_dict.popitem()\nprint(popped_item)\nprint(my_dict)"
+    ],
+    "output": ["(3, 'cherry')", "{1: 'apple', 2: 'banana'}"]
+  },
+  {
+    "name": "setdefault",
+    "syntax": "dictionary.setdefault(key[, default])",
+    "description": "Returns the value of the specified key. If the key does not exist, it inserts the key with a specified value (or None) and returns that value.",
+    "examples": [
+      "my_dict = {1: 'apple', 2: 'banana', 3: 'cherry'}\nvalue = my_dict.setdefault(4, 'orange')\nprint(value)\nprint(my_dict)"
+    ],
+    "output": [
+      "'orange'",
+      "{1: 'apple', 2: 'banana', 3: 'cherry', 4: 'orange'}"
+    ]
+  },
+  {
+    "name": "update",
+    "syntax": "dictionary.update([other])",
+    "description": "Updates the dictionary with the key-value pairs from another dictionary or an iterable of key-value pairs.",
+    "examples": [
+      "my_dict = {1: 'apple', 2: 'banana'}\nother_dict = {3: 'cherry', 4: 'orange'}\nmy_dict.update(other_dict)\nprint(my_dict)"
+    ],
+    "output": ["{1: 'apple', 2: 'banana', 3: 'cherry', 4: 'orange'}"]
+  },
+  {
+    "name": "values",
+    "syntax": "dictionary.values()",
+    "description": "Returns a list of values in the dictionary.",
+    "examples": [
+      "my_dict = {1: 'apple', 2: 'banana', 3: 'cherry'}\nprint(my_dict.values())"
+    ],
+    "output": ["dict_values(['apple', 'banana', 'cherry'])"]
+  }
+]

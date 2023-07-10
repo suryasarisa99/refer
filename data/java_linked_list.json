@@ -1,0 +1,322 @@
+[
+  {
+    "name": "add",
+    "syntax": "boolean add(E e)",
+    "keypoints": "Adds the specified element to the end of the list.",
+    "description": "This method adds the specified element to the end of the list and returns true. It throws an exception if the element cannot be added.",
+    "examples": ["list.add(\"apple\");", "linkedList.add(10);"]
+  },
+  {
+    "name": "addFirst",
+    "syntax": "void addFirst(E e)",
+    "keypoints": "Inserts the specified element at the beginning of the list.",
+    "description": "This method inserts the specified element at the beginning of the list. Any existing elements are shifted to the right.",
+    "examples": ["linkedList.addFirst(\"banana\");", "deque.addFirst(5);"]
+  },
+  {
+    "name": "addLast",
+    "syntax": "void addLast(E e)",
+    "keypoints": "Appends the specified element at the end of the list.",
+    "description": "This method appends the specified element at the end of the list, similar to the add() method.",
+    "examples": ["linkedList.addLast(\"cherry\");", "deque.addLast(20);"]
+  },
+  {
+    "name": "addAll",
+    "syntax": "boolean addAll(Collection<? extends E> c)",
+    "keypoints": "Adds all the elements from the specified collection to the end of the list.",
+    "description": "This method adds all the elements from the specified collection to the end of the list. It returns true if the list was modified.",
+    "examples": ["list.addAll(collection);", "linkedList.addAll(anotherList);"]
+  },
+  {
+    "name": "addAll(int index, Collection<? extends E> c)",
+    "syntax": "boolean addAll(int index, Collection<? extends E> c)",
+    "keypoints": "Adds all the elements from the specified collection at the specified index in the list.",
+    "description": "This method adds all the elements from the specified collection at the specified index in the list. It returns true if the list was modified.",
+    "examples": [
+      "list.addAll(2, collection);",
+      "linkedList.addAll(0, anotherList);"
+    ]
+  },
+  {
+    "name": "clear",
+    "syntax": "void clear()",
+    "keypoints": "Removes all elements from the list.",
+    "description": "This method removes all elements from the list, leaving it empty.",
+    "examples": ["list.clear();", "linkedList.clear();"]
+  },
+  {
+    "name": "clone",
+    "syntax": "Object clone()",
+    "keypoints": "Creates a shallow copy of the list.",
+    "description": "This method creates a shallow copy of the list. Changes made to the original list will not be reflected in the cloned list.",
+    "examples": [
+      "List<String> clonedList = new ArrayList<>(list);",
+      "LinkedList<Integer> clonedLinkedList = (LinkedList<Integer>) linkedList.clone();"
+    ]
+  },
+  {
+    "name": "contains",
+    "syntax": "boolean contains(Object o)",
+    "keypoints": "Checks if the list contains the specified element.",
+    "description": "This method checks if the list contains the specified element and returns true if found, false otherwise.",
+    "examples": [
+      "boolean contains = list.contains(\"apple\");",
+      "boolean contains = linkedList.contains(10);"
+    ]
+  },
+  {
+    "name": "descendingIterator",
+    "syntax": "Iterator<E> descendingIterator()",
+    "keypoints": "Returns an iterator over the elements in reverse sequential order.",
+    "description": "This method returns an iterator over the elements in reverse sequential order. The iterator starts at the end of the list and moves towards the beginning.",
+    "examples": [
+      "Iterator<String> descendingIterator = list.descendingIterator();",
+      "Iterator<Integer> descendingIterator = linkedList.descendingIterator();"
+    ]
+  },
+  {
+    "name": "element",
+    "syntax": "E element()",
+    "keypoints": "Retrieves the first element of the list.",
+    "description": "This method retrieves the first element of the list without removing it. It is equivalent to getFirst().",
+    "examples": [
+      "String firstElement = list.element();",
+      "Integer firstElement = linkedList.element();"
+    ]
+  },
+  {
+    "name": "get",
+    "syntax": "E get(int index)",
+    "keypoints": "Retrieves the element at the specified index in the list.",
+    "description": "This method retrieves the element at the specified index in the list. The index should be within the range of 0 to size() - 1.",
+    "examples": [
+      "String element = list.get(2);",
+      "Integer element = linkedList.get(0);"
+    ]
+  },
+  {
+    "name": "getFirst",
+    "syntax": "E getFirst()",
+    "keypoints": "Retrieves the first element of the list.",
+    "description": "This method retrieves the first element of the list without removing it. It is equivalent to element().",
+    "examples": [
+      "String firstElement = list.getFirst();",
+      "Integer firstElement = linkedList.getFirst();"
+    ]
+  },
+  {
+    "name": "getLast",
+    "syntax": "E getLast()",
+    "keypoints": "Retrieves the last element of the list.",
+    "description": "This method retrieves the last element of the list without removing it.",
+    "examples": [
+      "String lastElement = list.getLast();",
+      "Integer lastElement = linkedList.getLast();"
+    ]
+  },
+  {
+    "name": "indexOf",
+    "syntax": "int indexOf(Object o)",
+    "keypoints": "Returns the index of the first occurrence of the specified element in the list.",
+    "description": "This method returns the index of the first occurrence of the specified element in the list. If the element is not found, it returns -1.",
+    "examples": [
+      "int index = list.indexOf(\"apple\");",
+      "int index = linkedList.indexOf(10);"
+    ]
+  },
+  {
+    "name": "lastIndexOf",
+    "syntax": "int lastIndexOf(Object o)",
+    "keypoints": "Returns the index of the last occurrence of the specified element in the list.",
+    "description": "This method returns the index of the last occurrence of the specified element in the list. If the element is not found, it returns -1.",
+    "examples": [
+      "int lastIndex = list.lastIndexOf(\"apple\");",
+      "int lastIndex = linkedList.lastIndexOf(10);"
+    ]
+  },
+  {
+    "name": "listIterator",
+    "syntax": "ListIterator<E> listIterator(int index)",
+    "keypoints": "Returns a list iterator over the elements in the list.",
+    "description": "This method returns a list iterator over the elements in the list, starting at the specified index.",
+    "examples": [
+      "ListIterator<String> listIterator = list.listIterator();",
+      "ListIterator<Integer> listIterator = linkedList.listIterator(2);"
+    ]
+  },
+  {
+    "name": "offer",
+    "syntax": "boolean offer(E e)",
+    "keypoints": "Adds the specified element to the end of the list.",
+    "description": "This method adds the specified element to the end of the list and returns true. If the element cannot be added, it returns false.",
+    "examples": [
+      "boolean added = list.offer(\"apple\");",
+      "boolean added = linkedList.offer(10);"
+    ]
+  },
+  {
+    "name": "offerFirst",
+    "syntax": "boolean offerFirst(E e)",
+    "keypoints": "Inserts the specified element at the beginning of the list.",
+    "description": "This method inserts the specified element at the beginning of the list and returns true. If the element cannot be added, it returns false.",
+    "examples": [
+      "boolean added = linkedList.offerFirst(\"banana\");",
+      "boolean added = deque.offerFirst(5);"
+    ]
+  },
+  {
+    "name": "offerLast",
+    "syntax": "boolean offerLast(E e)",
+    "keypoints": "Appends the specified element at the end of the list.",
+    "description": "This method appends the specified element at the end of the list, similar to the offer() method. It returns true if the element was added.",
+    "examples": [
+      "boolean added = linkedList.offerLast(\"cherry\");",
+      "boolean added = deque.offerLast(20);"
+    ]
+  },
+  {
+    "name": "peek",
+    "syntax": "E peek()",
+    "keypoints": "Retrieves the first element of the list without removing it.",
+    "description": "This method retrieves the first element of the list without removing it. If the list is empty, it returns null.",
+    "examples": [
+      "String firstElement = list.peek();",
+      "Integer firstElement = linkedList.peek();"
+    ]
+  },
+  {
+    "name": "peekFirst",
+    "syntax": "E peekFirst()",
+    "keypoints": "Retrieves the first element of the list without removing it.",
+    "description": "This method retrieves the first element of the list without removing it. If the list is empty, it returns null.",
+    "examples": [
+      "String firstElement = list.peekFirst();",
+      "Integer firstElement = linkedList.peekFirst();"
+    ]
+  },
+  {
+    "name": "peekLast",
+    "syntax": "E peekLast()",
+    "keypoints": "Retrieves the last element of the list without removing it.",
+    "description": "This method retrieves the last element of the list without removing it. If the list is empty, it returns null.",
+    "examples": [
+      "String lastElement = list.peekLast();",
+      "Integer lastElement = linkedList.peekLast();"
+    ]
+  },
+  {
+    "name": "poll",
+    "syntax": "E poll()",
+    "keypoints": "Retrieves and removes the first element of the list.",
+    "description": "This method retrieves and removes the first element of the list. If the list is empty, it returns null.",
+    "examples": [
+      "String removedElement = list.poll();",
+      "Integer removedElement = linkedList.poll();"
+    ]
+  },
+  {
+    "name": "pollFirst",
+    "syntax": "E pollFirst()",
+    "keypoints": "Retrieves and removes the first element of the list.",
+    "description": "This method retrieves and removes the first element of the list. If the list is empty, it returns null.",
+    "examples": [
+      "String removedElement = list.pollFirst();",
+      "Integer removedElement = linkedList.pollFirst();"
+    ]
+  },
+  {
+    "name": "pollLast",
+    "syntax": "E pollLast()",
+    "keypoints": "Retrieves and removes the last element of the list.",
+    "description": "This method retrieves and removes the last element of the list. If the list is empty, it returns null.",
+    "examples": [
+      "String removedElement = list.pollLast();",
+      "Integer removedElement = linkedList.pollLast();"
+    ]
+  },
+  {
+    "name": "pop",
+    "syntax": "E pop()",
+    "keypoints": "Retrieves and removes the first element of the list.",
+    "description": "This method retrieves and removes the first element of the list, similar to poll().",
+    "examples": [
+      "String removedElement = list.pop();",
+      "Integer removedElement = linkedList.pop();"
+    ]
+  },
+  {
+    "name": "push",
+    "syntax": "void push(E e)",
+    "keypoints": "Inserts the specified element at the beginning of the list.",
+    "description": "This method inserts the specified element at the beginning of the list, similar to addFirst().",
+    "examples": ["list.push(\"banana\");", "linkedList.push(5);"]
+  },
+  {
+    "name": "remove",
+    "syntax": "E remove()",
+    "keypoints": "Retrieves and removes the first element of the list.",
+    "description": "This method retrieves and removes the first element of the list. If the list is empty, it throws a NoSuchElementException.",
+    "examples": [
+      "String removedElement = list.remove();",
+      "Integer removedElement = linkedList.remove();"
+    ]
+  },
+  {
+    "name": "remove(int index)",
+    "syntax": "E remove(int index)",
+    "keypoints": "Removes the element at the specified index in the list.",
+    "description": "This method removes the element at the specified index in the list and returns the removed element.",
+    "examples": [
+      "String removedElement = list.remove(2);",
+      "Integer removedElement = linkedList.remove(0);"
+    ]
+  },
+  {
+    "name": "remove(Object o)",
+    "syntax": "boolean remove(Object o)",
+    "keypoints": "Removes the first occurrence of the specified element from the list.",
+    "description": "This method removes the first occurrence of the specified element from the list. It returns true if the element was found and removed.",
+    "examples": [
+      "boolean removed = list.remove(\"apple\");",
+      "boolean removed = linkedList.remove(10);"
+    ]
+  },
+  {
+    "name": "removeFirst",
+    "syntax": "E removeFirst()",
+    "keypoints": "Removes and retrieves the first element of the list.",
+    "description": "This method removes and retrieves the first element of the list. If the list is empty, it throws a NoSuchElementException.",
+    "examples": [
+      "String removedElement = list.removeFirst();",
+      "Integer removedElement = linkedList.removeFirst();"
+    ]
+  },
+  {
+    "name": "removeLast",
+    "syntax": "E removeLast()",
+    "keypoints": "Removes and retrieves the last element of the list.",
+    "description": "This method removes and retrieves the last element of the list. If the list is empty, it throws a NoSuchElementException.",
+    "examples": [
+      "String removedElement = list.removeLast();",
+      "Integer removedElement = linkedList.removeLast();"
+    ]
+  },
+
+  {
+    "name": "set",
+    "syntax": "E set(int index, E element)",
+    "keypoints": "Replaces the element at the specified index in the list with the specified element.",
+    "description": "This method replaces the element at the specified index in the list with the specified element and returns the original element.",
+    "examples": [
+      "String replacedElement = list.set(2, \"orange\");",
+      "Integer replacedElement = linkedList.set(0, 15);"
+    ]
+  },
+  {
+    "name": "size",
+    "syntax": "int size()",
+    "keypoints": "Returns the number of elements in the list.",
+    "description": "This method returns the number of elements in the list.",
+    "examples": ["int size = list.size();", "int size = linkedList.size();"]
+  }
+]

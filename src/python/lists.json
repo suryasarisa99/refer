@@ -1,0 +1,124 @@
+[
+  {
+    "name": "append",
+    "syntax": "list.append(element)",
+    "description": "Appends an element to the end of the list.",
+    "examples": [
+      "fruits = ['apple', 'banana', 'cherry']\nfruits.append('orange')",
+      "numbers = [1, 2, 3, 4]\nnumbers.append(5)"
+    ],
+    "output": [
+      "fruits: ['apple', 'banana', 'cherry', 'orange']",
+      "numbers: [1, 2, 3, 4, 5]"
+    ]
+  },
+  {
+    "name": "clear",
+    "syntax": "list.clear()",
+    "description": "Removes all elements from the list.",
+    "examples": [
+      "fruits = ['apple', 'banana', 'cherry']\nfruits.clear()",
+      "numbers = [1, 2, 3, 4, 5]\nnumbers.clear()"
+    ],
+    "output": ["fruits: []", "numbers: []"]
+  },
+  {
+    "name": "copy",
+    "syntax": "list.copy()",
+    "description": "Returns a shallow copy of the list.",
+    "examples": [
+      "fruits = ['apple', 'banana', 'cherry']\nfruits_copy = fruits.copy()",
+      "numbers = [1, 2, 3, 4, 5]\nnumbers_copy = numbers.copy()"
+    ],
+    "output": [
+      "fruits_copy: ['apple', 'banana', 'cherry']",
+      "numbers_copy: [1, 2, 3, 4, 5]"
+    ]
+  },
+  {
+    "name": "count",
+    "syntax": "list.count(element)",
+    "description": "Returns the number of occurrences of an element in the list.",
+    "examples": [
+      "fruits = ['apple', 'banana', 'cherry', 'apple']\napple_count = fruits.count('apple')",
+      "numbers = [1, 2, 2, 3, 4, 2]\ntwo_count = numbers.count(2)"
+    ],
+    "output": ["apple_count: 2", "two_count: 3"]
+  },
+  {
+    "name": "extend",
+    "syntax": "list.extend(iterable)",
+    "description": "Appends elements from an iterable to the end of the list.",
+    "examples": [
+      "fruits = ['apple', 'banana']\nmore_fruits = ['cherry', 'orange']\nfruits.extend(more_fruits)",
+      "numbers = [1, 2, 3]\nmore_numbers = (4, 5, 6)\nnumbers.extend(more_numbers)"
+    ],
+    "output": [
+      "fruits: ['apple', 'banana', 'cherry', 'orange']",
+      "numbers: [1, 2, 3, 4, 5, 6]"
+    ]
+  },
+  {
+    "name": "index",
+    "syntax": "list.index(element, start, end)",
+    "description": "Returns the index of the first occurrence of an element in the list.",
+    "examples": [
+      "fruits = ['apple', 'banana', 'cherry', 'banana']\nbanana_index = fruits.index('banana')",
+      "numbers = [1, 2, 3, 2, 4, 2]\ntwo_index = numbers.index(2)"
+    ],
+    "output": ["banana_index: 1", "two_index: 1"]
+  },
+  {
+    "name": "insert",
+    "syntax": "list.insert(index, element)",
+    "description": "Inserts an element at a specified index in the list.",
+    "examples": [
+      "fruits = ['apple', 'banana', 'cherry']\nfruits.insert(1, 'orange')",
+      "numbers = [1, 2, 3, 4]\nnumbers.insert(2, 5)"
+    ],
+    "output": [
+      "fruits: ['apple', 'orange', 'banana', 'cherry']",
+      "numbers: [1, 2, 5, 3, 4]"
+    ]
+  },
+  {
+    "name": "pop",
+    "syntax": "list.pop(index)",
+    "description": "Removes and returns the element at a specified index in the list.",
+    "examples": [
+      "fruits = ['apple', 'banana', 'cherry']\nremoved_fruit = fruits.pop(1)",
+      "numbers = [1, 2, 3, 4]\nremoved_number = numbers.pop()"
+    ],
+    "output": ["removed_fruit: 'banana'", "removed_number: 4"]
+  },
+  {
+    "name": "remove",
+    "syntax": "list.remove(element)",
+    "description": "Removes the first occurrence of an element from the list.",
+    "examples": [
+      "fruits = ['apple', 'banana', 'cherry']\nfruits.remove('banana')",
+      "numbers = [1, 2, 3, 2]\nnumbers.remove(2)"
+    ],
+    "output": ["fruits: ['apple', 'cherry']", "numbers: [1, 3, 2]"]
+  },
+  {
+    "name": "reverse",
+    "syntax": "list.reverse()",
+    "description": "Reverses the order of elements in the list.",
+    "examples": [
+      "fruits = ['apple', 'banana', 'cherry']\nfruits.reverse()",
+      "numbers = [1, 2, 3, 4]\nnumbers.reverse()"
+    ],
+    "output": ["fruits: ['cherry', 'banana', 'apple']", "numbers: [4, 3, 2, 1]"]
+  },
+  {
+    "name": "sort",
+    "syntax": "list.sort(key, reverse)",
+    "description": "Sorts the elements in the list in ascending order.",
+    "examples": [
+      "fruits = ['apple', 'banana', 'cherry']\nfruits.sort()",
+      "numbers = [3, 1, 4, 2]\nnumbers.sort()"
+    ],
+    "output": ["fruits: ['apple', 'banana', 'cherry']", "numbers: [1, 2, 3, 4]"]
+  }
+]

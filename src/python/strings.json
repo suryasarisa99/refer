@@ -1,0 +1,168 @@
+[
+  {
+    "name": "capitalize",
+    "syntax": "str.capitalize()",
+    "keypoints": "Returns a copy of the string with its first character capitalized and the rest lowercased.",
+    "description": "",
+    "examples": [
+      "string = 'hello world'\ncapitalized_string = string.capitalize()"
+    ],
+    "output": ["capitalized_string = 'Hello world'"]
+  },
+  {
+    "name": "casefold",
+    "syntax": "str.casefold()",
+    "keypoints": "Returns a casefolded version of the string.",
+    "description": "",
+    "examples": [
+      "string = 'Hello World'\ncasefolded_string = string.casefold()"
+    ],
+    "output": ["casefolded_string = 'hello world'"]
+  },
+  {
+    "name": "center",
+    "syntax": "str.center(width[, fillchar])",
+    "keypoints": "Returns a centered string of a specified width.",
+    "description": "",
+    "examples": ["string = 'hello'\ncentered_string = string.center(10, '-')"],
+    "output": ["centered_string = '--hello---'"]
+  },
+  {
+    "name": "count",
+    "syntax": "str.count(sub[, start[, end]])",
+    "keypoints": "Returns the number of occurrences of a substring in the string.",
+    "description": "",
+    "examples": ["string = 'hello world'\ncount = string.count('o')"],
+    "output": ["count = 2"]
+  },
+  {
+    "name": "encode",
+    "syntax": "str.encode([encoding[, errors]])",
+    "keypoints": "Returns an encoded version of the string.",
+    "description": "",
+    "examples": [
+      "string = 'hello world'\nencoded_string = string.encode('utf-8')"
+    ],
+    "output": ["encoded_string = b'hello world'"]
+  },
+  {
+    "name": "endswith",
+    "syntax": "str.endswith(suffix[, start[, end]])",
+    "keypoints": "Checks if the string ends with a specified suffix.",
+    "description": "",
+    "examples": [
+      "string = 'hello world'\nends_with_world = string.endswith('world')"
+    ],
+    "output": ["ends_with_world = True"]
+  },
+  {
+    "name": "expandtabs",
+    "syntax": "str.expandtabs([tabsize])",
+    "keypoints": "Expands tabs in the string to multiple spaces.",
+    "description": "",
+    "examples": [
+      "string = 'hello\tworld'\nexpanded_string = string.expandtabs(4)"
+    ],
+    "output": ["expanded_string = 'hello   world'"]
+  },
+  {
+    "name": "find",
+    "syntax": "str.find(sub[, start[, end]])",
+    "keypoints": "Returns the lowest index of a substring in the string (-1 if not found).",
+    "description": "",
+    "examples": ["string = 'hello world'\nindex = string.find('world')"],
+    "output": ["index = 6"]
+  },
+  {
+    "name": "format",
+    "syntax": "str.format(*args, **kwargs)",
+    "keypoints": "Formats the string using positional and keyword arguments.",
+    "description": "",
+    "examples": [
+      "name = 'John'\nage = 25\nformatted_string = 'My name is {} and I am {} years old.'.format(name, age)"
+    ],
+    "output": ["formatted_string = 'My name is John and I am 25 years old.'"]
+  },
+  {
+    "name": "format_map",
+    "syntax": "str.format_map(mapping)",
+    "keypoints": "Formats the string using a mapping object.",
+    "description": "",
+    "examples": [
+      "person = {'name': 'John', 'age': 25}\nformatted_string = 'My name is {name} and I am {age} years old.'.format_map(person)"
+    ],
+    "output": ["formatted_string = 'My name is John and I am 25 years old.'"]
+  },
+  {
+    "name": "index",
+    "syntax": "str.index(sub[, start[, end]])",
+    "keypoints": "Returns the lowest index of a substring in the string (raises an exception if not found).",
+    "description": "",
+    "examples": ["string = 'hello world'\nindex = string.index('world')"],
+    "output": ["index = 6"]
+  },
+  {
+    "name": "isalnum",
+    "syntax": "str.isalnum()",
+    "keypoints": "Checks if all characters in the string are alphanumeric.",
+    "description": "",
+    "examples": ["string = 'Hello123'\nis_alphanumeric = string.isalnum()"],
+    "output": ["is_alphanumeric = True"]
+  },
+  {
+    "name": "isalpha",
+    "syntax": "str.isalpha()",
+    "keypoints": "Checks if all characters in the string are alphabetic.",
+    "description": "",
+    "examples": ["string = 'Hello'\nis_alpha = string.isalpha()"],
+    "output": ["is_alpha = True"]
+  },
+  {
+    "name": "isascii",
+    "syntax": "str.isascii()",
+    "keypoints": "Checks if all characters in the string are ASCII.",
+    "description": "",
+    "examples": ["string = 'Hello'\nis_ascii = string.isascii()"],
+    "output": ["is_ascii = True"]
+  },
+  {
+    "name": "isdecimal",
+    "syntax": "str.isdecimal()",
+    "keypoints": "Checks if all characters in the string are decimal.",
+    "description": "",
+    "examples": ["string = '123'\nis_decimal = string.isdecimal()"],
+    "output": ["is_decimal = True"]
+  },
+  {
+    "name": "isdigit",
+    "syntax": "str.isdigit()",
+    "keypoints": "Checks if all characters in the string are digits.",
+    "description": "",
+    "examples": ["string = '123'\nis_digit = string.isdigit()"],
+    "output": ["is_digit = True"]
+  },
+  {
+    "name": "isidentifier",
+    "syntax": "str.isidentifier()",
+    "keypoints": "Checks if the string is a valid identifier.",
+    "description": "",
+    "examples": ["string = 'hello'\nis_identifier = string.isidentifier()"],
+    "output": ["is_identifier = True"]
+  },
+  {
+    "name": "islower",
+    "syntax": "str.islower()",
+    "keypoints": "Checks if all characters in the string are lowercase.",
+    "description": "",
+    "examples": ["string = 'hello'\nis_lower = string.islower()"],
+    "output": ["is_lower = True"]
+  },
+  {
+    "name": "isnumeric",
+    "syntax": "str.isnumeric()",
+    "keypoints": "Checks if all characters in the string are numeric.",
+    "description": "",
+    "examples": ["string = '123'\nis_numeric = string.isnumeric()"],
+    "output": ["is_numeric = True"]
+  }
+]

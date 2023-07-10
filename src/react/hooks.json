@@ -1,0 +1,96 @@
+[
+  {
+    "name": "useState",
+    "syntax": "const [state, setState] = useState(initialState)",
+    "description": "Returns a stateful value and a function to update it.",
+    "examples": [
+      "const [count, setCount] = useState(0);",
+      "const [name, setName] = useState('John');"
+    ],
+    "output": ["count: 0", "name: 'John'"]
+  },
+  {
+    "name": "useEffect",
+    "syntax": "useEffect(callback, dependencies)",
+    "description": "Runs the effect callback after the component renders.",
+    "examples": [
+      "useEffect(() => {\n  console.log('Component rendered');\n}, []);",
+      "useEffect(() => {\n  // Update document title\n  document.title = `Count: ${count}`;\n}, [count]);"
+    ],
+    "output": ["Component rendered", "Updated document title"]
+  },
+  {
+    "name": "useContext",
+    "syntax": "const value = useContext(context)",
+    "description": "Accesses the value from the nearest Context Provider.",
+    "examples": [
+      "const user = useContext(UserContext);",
+      "const theme = useContext(ThemeContext);"
+    ],
+    "output": ["user: { name: 'John', age: 25 }", "theme: 'dark'"]
+  },
+  {
+    "name": "useReducer",
+    "syntax": "const [state, dispatch] = useReducer(reducer, initialState)",
+    "description": "Manages state changes with a reducer function.",
+    "examples": [
+      "const [count, dispatch] = useReducer(countReducer, 0);",
+      "const [user, dispatch] = useReducer(userReducer, initialState);"
+    ],
+    "output": ["count: 0", "user: { name: 'John', age: 25 }"]
+  },
+  {
+    "name": "useCallback",
+    "syntax": "const memoizedCallback = useCallback(callback, dependencies)",
+    "description": "Returns a memoized version of the callback function.",
+    "examples": [
+      "const handleClick = useCallback(() => {\n  console.log('Button clicked');\n}, []);"
+    ],
+    "output": ["Button clicked"]
+  },
+  {
+    "name": "useMemo",
+    "syntax": "const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b])",
+    "description": "Returns a memoized value computed from the dependencies.",
+    "examples": [
+      "const fullName = useMemo(() => `${firstName} ${lastName}`, [firstName, lastName]);",
+      "const sortedList = useMemo(() => sortList(list), [list]);"
+    ],
+    "output": ["fullName: 'John Doe'", "sortedList: [1, 2, 3, 4, 5]"]
+  },
+  {
+    "name": "useRef",
+    "syntax": "const refContainer = useRef(initialValue)",
+    "description": "Creates a mutable ref object to store a value across renders.",
+    "examples": ["const inputRef = useRef();", "const countRef = useRef(0);"],
+    "output": ["inputRef: { current: <input> }", "countRef: { current: 0 }"]
+  },
+  {
+    "name": "useImperativeHandle",
+    "syntax": "useImperativeHandle(ref, createHandle, [deps])",
+    "description": "Customizes the instance value that is exposed to parent components when using the ref prop.",
+    "examples": [
+      "useImperativeHandle(ref, () => ({\n  focus: () => {\n    inputRef.current.focus();\n  }\n}), [inputRef]);"
+    ],
+    "output": ["Exposed 'focus' method"]
+  },
+  {
+    "name": "useLayoutEffect",
+    "syntax": "useLayoutEffect(callback, dependencies)",
+    "description": "Runs the effect callback after the component renders, but before the browser paints.",
+    "examples": [
+      "useLayoutEffect(() => {\n  // Perform DOM measurements\n  const width = window.innerWidth;\n  const height = window.innerHeight;\n  setDimensions({ width, height });\n}, []);"
+    ],
+    "output": ["Performed DOM measurements"]
+  },
+  {
+    "name": "useDebugValue",
+    "syntax": "useDebugValue(value, formatter)",
+    "description": "Provides a custom label for custom hooks in React DevTools.",
+    "examples": [
+      "useDebugValue(count, count => `Count: ${count}`);",
+      "useDebugValue(user, user => `User: ${user.name}`);"
+    ],
+    "output": ["Displayed custom hook label"]
+  }
+]

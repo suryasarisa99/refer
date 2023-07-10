@@ -1,0 +1,257 @@
+[
+  {
+    "name": "add",
+    "syntax": "set.add(element)",
+    "description": "Adds an element to the set.",
+    "examples": [
+      {
+        "example": "my_set = {1, 2, 3}\nmy_set.add(4)",
+        "output": "my_set = {1, 2, 3, 4}"
+      },
+      {
+        "example": "my_set = {'apple', 'banana'}\nmy_set.add('orange')",
+        "output": "my_set = {'apple', 'banana', 'orange'}"
+      }
+    ]
+  },
+  {
+    "name": "clear",
+    "syntax": "set.clear()",
+    "description": "Removes all elements from the set.",
+    "examples": [
+      {
+        "example": "my_set = {1, 2, 3}\nmy_set.clear()",
+        "output": "my_set = set()"
+      },
+      {
+        "example": "my_set = {'apple', 'banana', 'orange'}\nmy_set.clear()",
+        "output": "my_set = set()"
+      }
+    ]
+  },
+  {
+    "name": "copy",
+    "syntax": "set.copy()",
+    "description": "Returns a shallow copy of the set.",
+    "examples": [
+      {
+        "example": "my_set = {1, 2, 3}\nnew_set = my_set.copy()",
+        "output": "new_set = {1, 2, 3}"
+      },
+      {
+        "example": "my_set = {'apple', 'banana', 'orange'}\nnew_set = my_set.copy()",
+        "output": "new_set = {'apple', 'banana', 'orange'}"
+      }
+    ]
+  },
+  {
+    "name": "difference",
+    "syntax": "set.difference(*others)",
+    "description": "Returns a new set with elements that are in the set but not in the specified sets.",
+    "examples": [
+      {
+        "example": "set1 = {1, 2, 3}\nset2 = {2, 3, 4}\ndifference_set = set1.difference(set2)",
+        "output": "difference_set = {1}"
+      },
+      {
+        "example": "set1 = {'apple', 'banana', 'orange'}\nset2 = {'banana', 'kiwi'}\ndifference_set = set1.difference(set2)",
+        "output": "difference_set = {'apple', 'orange'}"
+      }
+    ]
+  },
+  {
+    "name": "difference_update",
+    "syntax": "set.difference_update(*others)",
+    "description": "Updates the set with elements that are in the set but not in the specified sets.",
+    "examples": [
+      {
+        "example": "set1 = {1, 2, 3}\nset2 = {2, 3, 4}\nset1.difference_update(set2)",
+        "output": "set1 = {1}"
+      },
+      {
+        "example": "set1 = {'apple', 'banana', 'orange'}\nset2 = {'banana', 'kiwi'}\nset1.difference_update(set2)",
+        "output": "set1 = {'apple', 'orange'}"
+      }
+    ]
+  },
+  {
+    "name": "discard",
+    "syntax": "set.discard(element)",
+    "description": "Removes an element from the set if it is present.",
+    "examples": [
+      {
+        "example": "my_set = {1, 2, 3}\nmy_set.discard(2)",
+        "output": "my_set = {1, 3}"
+      },
+      {
+        "example": "my_set = {'apple', 'banana', 'orange'}\nmy_set.discard('banana')",
+        "output": "my_set = {'apple', 'orange'}"
+      }
+    ]
+  },
+  {
+    "name": "intersection",
+    "syntax": "set.intersection(*others)",
+    "description": "Returns a new set with elements that are common to the set and all specified sets.",
+    "examples": [
+      {
+        "example": "set1 = {1, 2, 3}\nset2 = {2, 3, 4}\nintersection_set = set1.intersection(set2)",
+        "output": "intersection_set = {2, 3}"
+      },
+      {
+        "example": "set1 = {'apple', 'banana', 'orange'}\nset2 = {'banana', 'kiwi'}\nintersection_set = set1.intersection(set2)",
+        "output": "intersection_set = {'banana'}"
+      }
+    ]
+  },
+  {
+    "name": "intersection_update",
+    "syntax": "set.intersection_update(*others)",
+    "description": "Updates the set with elements that are common to the set and all specified sets.",
+    "examples": [
+      {
+        "example": "set1 = {1, 2, 3}\nset2 = {2, 3, 4}\nset1.intersection_update(set2)",
+        "output": "set1 = {2, 3}"
+      },
+      {
+        "example": "set1 = {'apple', 'banana', 'orange'}\nset2 = {'banana', 'kiwi'}\nset1.intersection_update(set2)",
+        "output": "set1 = {'banana'}"
+      }
+    ]
+  },
+  {
+    "name": "isdisjoint",
+    "syntax": "set.isdisjoint(other)",
+    "description": "Returns True if the set has no elements in common with the specified set.",
+    "examples": [
+      {
+        "example": "set1 = {1, 2, 3}\nset2 = {4, 5, 6}\nis_disjoint = set1.isdisjoint(set2)",
+        "output": "is_disjoint = True"
+      },
+      {
+        "example": "set1 = {'apple', 'banana', 'orange'}\nset2 = {'kiwi', 'mango'}\nis_disjoint = set1.isdisjoint(set2)",
+        "output": "is_disjoint = True"
+      }
+    ]
+  },
+  {
+    "name": "issubset",
+    "syntax": "set.issubset(other)",
+    "description": "Returns True if all elements of the set are present in the specified set.",
+    "examples": [
+      {
+        "example": "set1 = {1, 2, 3}\nset2 = {1, 2, 3, 4, 5}\nis_subset = set1.issubset(set2)",
+        "output": "is_subset = True"
+      },
+      {
+        "example": "set1 = {'apple', 'banana', 'orange'}\nset2 = {'apple', 'banana', 'orange', 'kiwi'}\nis_subset = set1.issubset(set2)",
+        "output": "is_subset = True"
+      }
+    ]
+  },
+  {
+    "name": "issuperset",
+    "syntax": "set.issuperset(other)",
+    "description": "Returns True if the set contains all elements of the specified set.",
+    "examples": [
+      {
+        "example": "set1 = {1, 2, 3, 4, 5}\nset2 = {1, 2, 3}\nis_superset = set1.issuperset(set2)",
+        "output": "is_superset = True"
+      },
+      {
+        "example": "set1 = {'apple', 'banana', 'orange', 'kiwi'}\nset2 = {'apple', 'banana', 'orange'}\nis_superset = set1.issuperset(set2)",
+        "output": "is_superset = True"
+      }
+    ]
+  },
+  {
+    "name": "pop",
+    "syntax": "set.pop()",
+    "description": "Removes and returns an arbitrary element from the set.",
+    "examples": [
+      {
+        "example": "my_set = {1, 2, 3}\nelement = my_set.pop()",
+        "output": "element = 1, my_set = {2, 3}"
+      },
+      {
+        "example": "my_set = {'apple', 'banana', 'orange'}\nelement = my_set.pop()",
+        "output": "element = 'apple', my_set = {'banana', 'orange'}"
+      }
+    ]
+  },
+  {
+    "name": "remove",
+    "syntax": "set.remove(element)",
+    "description": "Removes the specified element from the set. Raises KeyError if the element is not found.",
+    "examples": [
+      {
+        "example": "my_set = {1, 2, 3}\nmy_set.remove(2)",
+        "output": "my_set = {1, 3}"
+      },
+      {
+        "example": "my_set = {'apple', 'banana', 'orange'}\nmy_set.remove('banana')",
+        "output": "my_set = {'apple', 'orange'}"
+      }
+    ]
+  },
+  {
+    "name": "symmetric_difference",
+    "syntax": "set.symmetric_difference(other)",
+    "description": "Returns a new set with elements that are in either the set or the specified set, but not both.",
+    "examples": [
+      {
+        "example": "set1 = {1, 2, 3}\nset2 = {2, 3, 4}\nsymmetric_difference_set = set1.symmetric_difference(set2)",
+        "output": "symmetric_difference_set = {1, 4}"
+      },
+      {
+        "example": "set1 = {'apple', 'banana', 'orange'}\nset2 = {'banana', 'kiwi'}\nsymmetric_difference_set = set1.symmetric_difference(set2)",
+        "output": "symmetric_difference_set = {'apple', 'kiwi', 'orange'}"
+      }
+    ]
+  },
+  {
+    "name": "symmetric_difference_update",
+    "syntax": "set.symmetric_difference_update(other)",
+    "description": "Updates the set with elements that are in either the set or the specified set, but not both.",
+    "examples": [
+      {
+        "example": "set1 = {1, 2, 3}\nset2 = {2, 3, 4}\nset1.symmetric_difference_update(set2)",
+        "output": "set1 = {1, 4}"
+      },
+      {
+        "example": "set1 = {'apple', 'banana', 'orange'}\nset2 = {'banana', 'kiwi'}\nset1.symmetric_difference_update(set2)",
+        "output": "set1 = {'apple', 'kiwi', 'orange'}"
+      }
+    ]
+  },
+  {
+    "name": "union",
+    "syntax": "set.union(*others)",
+    "description": "Returns a new set with elements from the set and all specified sets.",
+    "examples": [
+      {
+        "example": "set1 = {1, 2, 3}\nset2 = {3, 4, 5}\nunion_set = set1.union(set2)",
+        "output": "union_set = {1, 2, 3, 4, 5}"
+      },
+      {
+        "example": "set1 = {'apple', 'banana', 'orange'}\nset2 = {'orange', 'kiwi'}\nunion_set = set1.union(set2)",
+        "output": "union_set = {'apple', 'banana', 'orange', 'kiwi'}"
+      }
+    ]
+  },
+  {
+    "name": "update",
+    "syntax": "set.update(*others)",
+    "description": "Updates the set with elements from the set and all specified sets.",
+    "examples": [
+      {
+        "example": "set1 = {1, 2, 3}\nset2 = {3, 4, 5}\nset1.update(set2)",
+        "output": "set1 = {1, 2, 3, 4, 5}"
+      },
+      {
+        "example": "set1 = {'apple', 'banana', 'orange'}\nset2 = {'orange', 'kiwi'}\nset1.update(set2)",
+        "output": "set1 = {'apple', 'banana', 'orange', 'kiwi'}"
+      }
+    ]
+  }
+]

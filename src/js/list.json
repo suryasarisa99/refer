@@ -1,0 +1,243 @@
+[
+  {
+    "name": "concat",
+    "syntax": "arr.concat(array1, array2, ..., arrayN)",
+    "keypoints": "Joins two or more arrays and returns a new array.",
+    "description": "",
+    "examples": ["const newArray = arr1.concat(arr2);"]
+  },
+  {
+    "name": "copyWithin",
+    "syntax": "arr.copyWithin(target, start, end)",
+    "keypoints": "Copies array elements within the array, to and from specified positions.",
+    "description": "",
+    "examples": ["arr.copyWithin(2, 0, 2);"]
+  },
+  {
+    "name": "entries",
+    "syntax": "arr.entries()",
+    "keypoints": "Returns a key-value pair Array Iteration Object.",
+    "description": "",
+    "examples": ["const iterator = arr.entries();"]
+  },
+  {
+    "name": "every",
+    "syntax": "arr.every(callback(element[, index[, array]])[, thisArg])",
+    "keypoints": "Checks if every element in an array passes a test.",
+    "description": "",
+    "examples": ["const allPositive = arr.every((element) => element > 0);"]
+  },
+  {
+    "name": "fill",
+    "syntax": "arr.fill(value[, start[, end]])",
+    "keypoints": "Fills the elements in an array with a static value.",
+    "description": "",
+    "examples": ["arr.fill(0);"]
+  },
+  {
+    "name": "filter",
+    "syntax": "arr.filter(callback(element[, index[, array]])[, thisArg])",
+    "keypoints": "Creates a new array with every element in an array that passes a test.",
+    "description": "",
+    "examples": ["const filteredArray = arr.filter((element) => element > 0);"]
+  },
+  {
+    "name": "find",
+    "syntax": "arr.find(callback(element[, index[, array]])[, thisArg])",
+    "keypoints": "Returns the value of the first element in an array that passes a test.",
+    "description": "",
+    "examples": ["const foundElement = arr.find((element) => element > 0);"]
+  },
+  {
+    "name": "findIndex",
+    "syntax": "arr.findIndex(callback(element[, index[, array]])[, thisArg])",
+    "keypoints": "Returns the index of the first element in an array that passes a test.",
+    "description": "",
+    "examples": ["const foundIndex = arr.findIndex((element) => element > 0);"]
+  },
+  {
+    "name": "flat",
+    "syntax": "arr.flat([depth])",
+    "keypoints": "Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.",
+    "description": "",
+    "examples": ["const flattenedArray = arr.flat();"]
+  },
+  {
+    "name": "flatMap",
+    "syntax": "arr.flatMap(callback(element[, index[, array]])[, thisArg])",
+    "keypoints": "Creates a new array by applying a function to each element in an array and then flattening the result into it recursively up to the specified depth.",
+    "description": "",
+    "examples": ["const mappedArray = arr.flatMap((element) => [element * 2]);"]
+  },
+  {
+    "name": "forEach",
+    "syntax": "arr.forEach(callback(currentValue[, index[, array]])[, thisArg])",
+    "keypoints": "Calls a function for each element in an array.",
+    "description": "",
+    "examples": ["arr.forEach((element) => console.log(element));"]
+  },
+  {
+    "name": "from",
+    "syntax": "Array.from(arrayLike[, mapFn[, thisArg]])",
+    "keypoints": "Creates an array from an object.",
+    "description": "",
+    "examples": ["const newArray = Array.from(arrayLike);"]
+  },
+  {
+    "name": "includes",
+    "syntax": "arr.includes(valueToFind[, fromIndex])",
+    "keypoints": "Checks if an element is included in an array.",
+    "description": "",
+    "examples": ["const isFound = arr.includes(valueToFind);"]
+  },
+  {
+    "name": "indexOf",
+    "syntax": "arr.indexOf(searchElement[, fromIndex])",
+    "keypoints": "Returns the index of the first occurrence of a specified value in an array.",
+    "description": "",
+    "examples": ["const index = arr.indexOf(searchElement);"]
+  },
+  {
+    "name": "isArray",
+    "syntax": "Array.isArray(value)",
+    "keypoints": "Checks if an object is an array.",
+    "description": "",
+    "examples": ["const isArray = Array.isArray(value);"]
+  },
+  {
+    "name": "join",
+    "syntax": "arr.join([separator])",
+    "keypoints": "Joins all elements of an array into a string.",
+    "description": "",
+    "examples": ["const joinedString = arr.join(', ');"]
+  },
+  {
+    "name": "keys",
+    "syntax": "arr.keys()",
+    "keypoints": "Returns an Array Iteration Object containing the keys of the original array.",
+    "description": "",
+    "examples": ["const iterator = arr.keys();"]
+  },
+  {
+    "name": "lastIndexOf",
+    "syntax": "arr.lastIndexOf(searchElement[, fromIndex])",
+    "keypoints": "Returns the index of the last occurrence of a specified value in an array.",
+    "description": "",
+    "examples": ["const lastIndex = arr.lastIndexOf(searchElement);"]
+  },
+  {
+    "name": "map",
+    "syntax": "arr.map(callback(element[, index[, array]])[, thisArg])",
+    "keypoints": "Creates a new array with the results of calling a function for each element in an array.",
+    "description": "",
+    "examples": ["const mappedArray = arr.map((element) => element * 2);"]
+  },
+  {
+    "name": "pop",
+    "syntax": "arr.pop()",
+    "keypoints": "Removes the last element from an array and returns that element.",
+    "description": "",
+    "examples": ["const lastElement = arr.pop();"]
+  },
+  {
+    "name": "push",
+    "syntax": "arr.push(element1[, ..., elementN])",
+    "keypoints": "Adds one or more elements to the end of an array and returns the new length of the array.",
+    "description": "",
+    "examples": ["const newLength = arr.push(element1, element2);"]
+  },
+
+  {
+    "name": "push",
+    "syntax": "arr.push(element1[, ..., elementN])",
+    "keypoints": "Adds one or more elements to the end of an array and returns the new length of the array.",
+    "description": "",
+    "examples": ["const newLength = arr.push(element1, element2);"]
+  },
+  {
+    "name": "reduce",
+    "syntax": "arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])",
+    "keypoints": "Applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.",
+    "description": "",
+    "examples": [
+      "const sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue);",
+      "const result = arr.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);"
+    ]
+  },
+  {
+    "name": "reduceRight",
+    "syntax": "arr.reduceRight(callback(accumulator, currentValue[, index[, array]])[, initialValue])",
+    "keypoints": "Applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.",
+    "description": "",
+    "examples": [
+      "const sum = arr.reduceRight((accumulator, currentValue) => accumulator + currentValue);",
+      "const result = arr.reduceRight((accumulator, currentValue) => accumulator + currentValue, initialValue);"
+    ]
+  },
+  {
+    "name": "reverse",
+    "syntax": "arr.reverse()",
+    "keypoints": "Reverses the order of the elements in an array.",
+    "description": "",
+    "examples": ["arr.reverse();"]
+  },
+  {
+    "name": "shift",
+    "syntax": "arr.shift()",
+    "keypoints": "Removes the first element from an array and returns that removed element.",
+    "description": "",
+    "examples": ["const firstElement = arr.shift();"]
+  },
+  {
+    "name": "slice",
+    "syntax": "arr.slice([start[, end]])",
+    "keypoints": "Extracts a section of an array and returns it as a new array.",
+    "description": "",
+    "examples": ["const newArray = arr.slice(2, 5);"]
+  },
+  {
+    "name": "some",
+    "syntax": "arr.some(callback(element[, index[, array]])[, thisArg])",
+    "keypoints": "Checks if at least one element in an array passes a test.",
+    "description": "",
+    "examples": ["const hasPositive = arr.some((element) => element > 0);"]
+  },
+  {
+    "name": "sort",
+    "syntax": "arr.sort([compareFunction])",
+    "keypoints": "Sorts the elements of an array.",
+    "description": "",
+    "examples": ["arr.sort();"]
+  },
+  {
+    "name": "splice",
+    "syntax": "arr.splice(index[, deleteCount[, item1[, item2[, ...]]]])",
+    "keypoints": "Adds/removes elements from/to an array.",
+    "description": "",
+    "examples": [
+      "const removedElements = arr.splice(2, 2);",
+      "const removedElements = arr.splice(2, 2, 'newElement1', 'newElement2');"
+    ]
+  },
+  {
+    "name": "toLocaleString",
+    "syntax": "arr.toLocaleString([locales[, options]])",
+    "keypoints": "Converts elements of an array into strings, using locale-specific settings.",
+    "description": "",
+    "examples": ["const localeString = arr.toLocaleString();"]
+  },
+  {
+    "name": "toString",
+    "syntax": "arr.toString()",
+    "keypoints": "Converts elements of an array into strings.",
+    "description": "",
+    "examples": ["const arrayString = arr.toString();"]
+  },
+  {
+    "name": "unshift",
+    "syntax": "arr.unshift(element1[, ..., elementN])",
+    "keypoints": "Adds one or more elements to the beginning of an array and returns the new length of the array.",
+    "description": "",
+    "examples": ["const newLength = arr.unshift(element1, element2);"]
+  }
+]

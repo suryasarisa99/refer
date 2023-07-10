@@ -1,0 +1,143 @@
+[
+  {
+    "name": "add",
+    "syntax": "set.add(elem)",
+    "description": "Adds an element to the set.",
+    "examples": ["'set1.add(1)\nset1.add(2)'"],
+    "output": ["set1 = {1}\nset1 = {1, 2}"]
+  },
+  {
+    "name": "clear",
+    "syntax": "set.clear()",
+    "description": "Removes all elements from the set.",
+    "examples": ["'set1.clear()'"],
+    "output": ["set1 = {}"]
+  },
+  {
+    "name": "copy",
+    "syntax": "set.copy()",
+    "description": "Returns a shallow copy of the set.",
+    "examples": ["'set2 = set1.copy()'"],
+    "output": ["set2 = {1, 2}"]
+  },
+  {
+    "name": "difference",
+    "syntax": "set.difference(*others)",
+    "description": "Returns a new set with elements that are in the set but not in the specified sets.",
+    "examples": [
+      "'set1 = {1, 2, 3}\nset2 = {2, 3, 4}\nset3 = {3, 4, 5}\nset_diff = set1.difference(set2, set3)'"
+    ],
+    "output": ["set_diff = {1}"]
+  },
+  {
+    "name": "difference_update",
+    "syntax": "set.difference_update(*others)",
+    "description": "Removes elements from the set that are also present in the specified sets.",
+    "examples": [
+      "'set1 = {1, 2, 3}\nset2 = {2, 3, 4}\nset1.difference_update(set2)'"
+    ],
+    "output": ["set1 = {1}"]
+  },
+  {
+    "name": "discard",
+    "syntax": "set.discard(elem)",
+    "description": "Removes an element from the set if it is present.",
+    "examples": ["'set1.discard(2)'"],
+    "output": ["set1 = {1, 3}"]
+  },
+  {
+    "name": "intersection",
+    "syntax": "set.intersection(*others)",
+    "description": "Returns a new set with elements that are common to the set and all specified sets.",
+    "examples": [
+      "'set1 = {1, 2, 3}\nset2 = {2, 3, 4}\nset3 = {3, 4, 5}\nset_intersection = set1.intersection(set2, set3)'"
+    ],
+    "output": ["set_intersection = {3}"]
+  },
+  {
+    "name": "intersection_update",
+    "syntax": "set.intersection_update(*others)",
+    "description": "Updates the set with elements that are common to the set and all specified sets.",
+    "examples": [
+      "'set1 = {1, 2, 3}\nset2 = {2, 3, 4}\nset1.intersection_update(set2)'"
+    ],
+    "output": ["set1 = {2, 3}"]
+  },
+  {
+    "name": "isdisjoint",
+    "syntax": "set.isdisjoint(other)",
+    "description": "Returns True if the set has no elements in common with the specified set.",
+    "examples": [
+      "'set1 = {1, 2, 3}\nset2 = {4, 5, 6}\nresult = set1.isdisjoint(set2)'"
+    ],
+    "output": ["result = True"]
+  },
+  {
+    "name": "issubset",
+    "syntax": "set.issubset(other)",
+    "description": "Returns True if all elements of the set are present in the specified set.",
+    "examples": [
+      "'set1 = {1, 2}\nset2 = {1, 2, 3}\nresult = set1.issubset(set2)'"
+    ],
+    "output": ["result = True"]
+  },
+  {
+    "name": "issuperset",
+    "syntax": "set.issuperset(other)",
+    "description": "Returns True if all elements of the specified set are present in the set.",
+    "examples": [
+      "'set1 = {1, 2, 3}\nset2 = {1, 2}\nresult = set1.issuperset(set2)'"
+    ],
+    "output": ["result = True"]
+  },
+  {
+    "name": "pop",
+    "syntax": "set.pop()",
+    "description": "Removes and returns an arbitrary element from the set.",
+    "examples": ["'removed_elem = set1.pop()'"],
+    "output": ["removed_elem = 1\nset1 = {2, 3}"]
+  },
+  {
+    "name": "remove",
+    "syntax": "set.remove(elem)",
+    "description": "Removes the specified element from the set.",
+    "examples": ["'set1.remove(2)'"],
+    "output": ["set1 = {1, 3}"]
+  },
+  {
+    "name": "symmetric_difference",
+    "syntax": "set.symmetric_difference(other)",
+    "description": "Returns a new set with elements that are in either the set or the specified set, but not both.",
+    "examples": [
+      "'set1 = {1, 2, 3}\nset2 = {3, 4}\nset_sym_diff = set1.symmetric_difference(set2)'"
+    ],
+    "output": ["set_sym_diff = {1, 2, 4}"]
+  },
+  {
+    "name": "symmetric_difference_update",
+    "syntax": "set.symmetric_difference_update(other)",
+    "description": "Updates the set with elements that are in either the set or the specified set, but not both.",
+    "examples": [
+      "set1 = {1, 2, 3}\nset2 = {3, 4, 5}\nset1.symmetric_difference_update(set2)"
+    ],
+    "output": ["set1 = {1, 2, 4, 5}"]
+  },
+  {
+    "name": "union",
+    "syntax": "set.union(*others)",
+    "description": "Returns a new set with elements from the set and all specified sets.",
+    "examples": [
+      "set1 = {1, 2}\nset2 = {2, 3}\nset3 = {3, 4}\nset_union = set1.union(set2, set3)"
+    ],
+    "output": ["set_union = {1, 2, 3, 4}"]
+  },
+  {
+    "name": "update",
+    "syntax": "set.update(*others)",
+    "description": "Updates the set with elements from the set and all specified sets.",
+    "examples": [
+      "set1 = {1, 2}\nset2 = {2, 3}\nset3 = {3, 4}\nset1.update(set2, set3)"
+    ],
+    "output": ["set1 = {1, 2, 3, 4}"]
+  }
+]

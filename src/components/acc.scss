@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(0, 0, 0);
+  font-family: "Fira Code";
+  color: white;
+}
+.acc {
+  max-width: 450px;
+  background-color: black;
+  margin: 0px auto;
+  border: 1px solid rgb(27, 27, 27);
+  margin-bottom: 4px;
+}
+.acc-head {
+  position: relative;
+  background-color: black;
+  .secondary-head {
+    position: absolute;
+    right: 12px;
+    top: 6px;
+    font-size: 14px;
+    .lang-type {
+      color: rgb(255, 39, 197);
+    }
+    .group-type {
+      color: rgb(99, 255, 72);
+    }
+  }
+  .head {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+}
+.acc-body {
+  padding: 15px;
+  padding-top: 20px;
+  background-color: black;
+  .keypoints {
+    margin: 20px 0;
+  }
+}
+.syntax-box {
+  // margin: 15px 0px;
+  margin-bottom: 15px;
+  .syntax-title {
+    margin-bottom: 10px;
+  }
+}
+.syntax {
+  background-color: rgb(44, 44, 44);
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+
+  .return-type {
+    color: rgb(244, 35, 255);
+  }
+  .bracket {
+    color: yellow;
+  }
+  .function {
+    color: rgb(101, 101, 255);
+  }
+  .parameter-type {
+    color: rgb(225, 73, 180);
+  }
+  .parameter-name {
+  }
+}
+
+.syntax::-webkit-scrollbar {
+  width: 0.5em; /* Adjust as needed */
+}
+
+.syntax::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.syntax::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.25em;
+}
+@font-face {
+  font-family: "FiraCode-Medium.ttf";
+  src: local("FiraCode"), url("../fonts/FiraCode-Medium.ttf") format("truetype");
+}
+
+// .search-bar {
+//   position: relative;
+//   // background-color: black;
+//   border: 0px;
+//   background-color: rgb(37, 36, 36);
+//   outline: none;
+//   width: 90%;
+//   height: 40px;
+//   border-radius: 15px;
+//   padding-left: 10px;
+//   margin: 15px auto;
+//   // margin-top: 15px;
+// }
+.search-icon {
+  position: absolute;
+  top: 12px;
+  color: rgb(142, 142, 142);
+}
+
+.app {
+  background-color: black;
+}
+
+// .search-page {
+.search-bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: black;
+
+  .sb {
+    background-color: rgb(42, 41, 41);
+    border-radius: 8px;
+    width: 90%;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+    color: white;
+    outline: none;
+    padding-left: 50px;
+  }
+  .search-icon {
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.search-page {
+  // background-color: red;
+}
+
+.item {
+  padding: 8px 14px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #636363b5;
+  background-color: black;
+  font-size: 19px;
+}
+
+.home {
+  // background-color: ;
+  margin-top: 40px;
+
+  .lang {
+    padding: 10px 24px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    // background-color: #191919;
+    margin-bottom: 16px;
+    border: 1px solid #a2a2a2b5;
+    font-size: 20px;
+  }
+}
+
+code {
+  font-family: "Fira Code";
+  .code {
+    font-family: "Fira Code";
+  }
+}
+
+.output-box {
+  margin: 10px auto;
+  margin-bottom: 30px;
+  // width: 100%;
+  .output-title {
+    margin-bottom: 8px;
+  }
+  .output {
+    padding: 8px 12px;
+    background-color: rgb(25, 25, 31);
+    color: rgb(246, 128, 64);
+    border-radius: 8px;
+  }
+}
+
+.arrow-down {
+  color: rgb(93, 93, 92);
+  font-size: 22px;
+  margin-right: 8px;
+}
+.arrow-right {
+  color: rgb(92, 92, 92);
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lang-page {
+  margin-top: 20px;
+}

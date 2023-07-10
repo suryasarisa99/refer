@@ -1,0 +1,352 @@
+[
+  {
+    "name": "charAt",
+    "syntax": "char charAt(int index)",
+    "keypoints": "Returns the character at the specified index in the string.",
+    "description": "",
+    "examples": ["char character = str.charAt(0);"]
+  },
+  {
+    "name": "codePointAt",
+    "syntax": "int codePointAt(int index)",
+    "keypoints": "Returns the Unicode code point value at the specified index in the string.",
+    "description": "",
+    "examples": ["int codePoint = str.codePointAt(1);"]
+  },
+  {
+    "name": "codePointBefore",
+    "syntax": "int codePointBefore(int index)",
+    "keypoints": "Returns the Unicode code point value before the specified index in the string.",
+    "description": "",
+    "examples": ["int codePoint = str.codePointBefore(3);"]
+  },
+  {
+    "name": "codePointCount",
+    "syntax": "int codePointCount(int beginIndex, int endIndex)",
+    "keypoints": "Returns the number of Unicode code points between the specified index range in the string.",
+    "description": "",
+    "examples": ["int codePoints = str.codePointCount(0, 5);"]
+  },
+  {
+    "name": "compareTo",
+    "syntax": "int compareTo(String anotherString)",
+    "keypoints": "Compares this string to another string lexicographically.",
+    "description": "",
+    "examples": ["int result = str.compareTo(\"anotherString\");"]
+  },
+  {
+    "name": "compareToIgnoreCase",
+    "syntax": "int compareToIgnoreCase(String str)",
+    "keypoints": "Compares this string to another string lexicographically, ignoring case differences.",
+    "description": "",
+    "examples": ["int result = str.compareToIgnoreCase(\"anotherString\");"]
+  },
+  {
+    "name": "concat",
+    "syntax": "String concat(String str)",
+    "keypoints": "Concatenates the specified string to the end of this string.",
+    "description": "",
+    "examples": ["String result = str.concat(\"suffix\");"]
+  },
+  {
+    "name": "contains",
+    "syntax": "boolean contains(CharSequence s)",
+    "keypoints": "Checks if this string contains the specified sequence of characters.",
+    "description": "",
+    "examples": ["boolean contains = str.contains(\"sequence\");"]
+  },
+  {
+    "name": "contentEquals",
+    "syntax": "boolean contentEquals(CharSequence cs)",
+    "keypoints": "Checks if this string is equal to the specified CharSequence.",
+    "description": "",
+    "examples": ["boolean equals = str.contentEquals(\"sequence\");"]
+  },
+  {
+    "name": "copyValueOf",
+    "syntax": "static String copyValueOf(char[] data)",
+    "keypoints": "Returns a new string that represents the characters of the specified array.",
+    "description": "",
+    "examples": ["String str = String.copyValueOf(charArray);"]
+  },
+  {
+    "name": "endsWith",
+    "syntax": "boolean endsWith(String suffix)",
+    "keypoints": "Checks if this string ends with the specified suffix.",
+    "description": "",
+    "examples": ["boolean endsWith = str.endsWith(\"suffix\");"]
+  },
+  {
+    "name": "equals",
+    "syntax": "boolean equals(Object anObject)",
+    "keypoints": "Checks if this string is equal to the specified object.",
+    "description": "",
+    "examples": ["boolean equals = str.equals(\"anotherString\");"]
+  },
+  {
+    "name": "equalsIgnoreCase",
+    "syntax": "boolean equalsIgnoreCase(String anotherString)",
+    "keypoints": "Checks if this string is equal to another string, ignoring case differences.",
+    "description": "",
+    "examples": ["boolean equals = str.equalsIgnoreCase(\"anotherString\");"]
+  },
+  {
+    "name": "format",
+    "syntax": "static String format(String format, Object... args)",
+    "keypoints": "Returns a formatted string using the specified format string and arguments.",
+    "description": "",
+    "examples": [
+      "String formattedString = String.format(\"Hello, %s!\", name);"
+    ]
+  },
+  {
+    "name": "getBytes",
+    "syntax": "byte[] getBytes()",
+    "keypoints": "Encodes this string into a sequence of bytes using the platform's default charset.",
+    "description": "",
+    "examples": ["byte[] bytes = str.getBytes();"]
+  },
+  {
+    "name": "getChars",
+    "syntax": "void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)",
+    "keypoints": "Copies characters from this string into the destination character array.",
+    "description": "",
+    "examples": ["str.getChars(0, 5, charArray, 0);"]
+  },
+  {
+    "name": "hashCode",
+    "syntax": "int hashCode()",
+    "keypoints": "Returns a hash code value for this string.",
+    "description": "",
+    "examples": ["int hashCode = str.hashCode();"]
+  },
+  {
+    "name": "indexOf",
+    "syntax": "int indexOf(int ch)",
+    "keypoints": "Returns the index of the first occurrence of the specified character in the string.",
+    "description": "",
+    "examples": ["int index = str.indexOf('a');"]
+  },
+  {
+    "name": "intern",
+    "syntax": "String intern()",
+    "keypoints": "Returns a canonical representation of the string.",
+    "description": "",
+    "examples": ["String canonicalString = str.intern();"]
+  },
+  {
+    "name": "isEmpty",
+    "syntax": "boolean isEmpty()",
+    "keypoints": "Checks if this string is empty.",
+    "description": "",
+    "examples": ["boolean isEmpty = str.isEmpty();"]
+  },
+  {
+    "name": "join",
+    "syntax": "static String join(CharSequence delimiter, CharSequence... elements)",
+    "keypoints": "Concatenates a sequence of strings using the specified delimiter.",
+    "description": "",
+    "examples": ["String joinedString = String.join(\", \", str1, str2, str3);"]
+  },
+  {
+    "name": "lastIndexOf",
+    "syntax": "int lastIndexOf(int ch)",
+    "keypoints": "Returns the index of the last occurrence of the specified character in the string.",
+    "description": "",
+    "examples": ["int index = str.lastIndexOf('a');"]
+  },
+  {
+    "name": "length",
+    "syntax": "int length()",
+    "keypoints": "Returns the length of this string.",
+    "description": "",
+    "examples": ["int length = str.length();"]
+  },
+  {
+    "name": "matches",
+    "syntax": "boolean matches(String regex)",
+    "keypoints": "Checks if this string matches the specified regular expression.",
+    "description": "",
+    "examples": ["boolean matches = str.matches(\"[a-zA-Z]+\");"]
+  },
+  {
+    "name": "offsetByCodePoints",
+    "syntax": "int offsetByCodePoints(int index, int codePointOffset)",
+    "keypoints": "Returns the index within this string that is offset by the specified code point offset.",
+    "description": "",
+    "examples": ["int newIndex = str.offsetByCodePoints(0, 2);"]
+  },
+  {
+    "name": "regionMatches",
+    "syntax": "boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)",
+    "keypoints": "Compares a region of this string to a region of another string.",
+    "description": "",
+    "examples": [
+      "boolean matches = str.regionMatches(true, 0, \"anotherString\", 0, 5);"
+    ]
+  },
+  {
+    "name": "replace",
+    "syntax": "String replace(char oldChar, char newChar)",
+    "keypoints": "Returns a new string resulting from replacing all occurrences of a specified character with another character.",
+    "description": "",
+    "examples": ["String replacedString = str.replace('a', 'b');"]
+  },
+  {
+    "name": "replaceAll",
+    "syntax": "String replaceAll(String regex, String replacement)",
+    "keypoints": "Replaces each substring of this string that matches the given regular expression with the specified replacement string.",
+    "description": "",
+    "examples": ["String replacedString = str.replaceAll(\"\\s\", \"\");"]
+  },
+  {
+    "name": "replaceFirst",
+    "syntax": "String replaceFirst(String regex, String replacement)",
+    "keypoints": "Replaces the first substring of this string that matches the given regular expression with the specified replacement string.",
+    "description": "",
+    "examples": ["String replacedString = str.replaceFirst(\"abc\", \"def\");"]
+  },
+  {
+    "name": "split",
+    "syntax": "String[] split(String regex)",
+    "keypoints": "Splits this string around matches of the given regular expression.",
+    "description": "",
+    "examples": ["String[] substrings = str.split(\"\\s\");"]
+  },
+  {
+    "name": "startsWith",
+    "syntax": "boolean startsWith(String prefix)",
+    "keypoints": "Checks if this string starts with the specified prefix.",
+    "description": "",
+    "examples": ["boolean startsWith = str.startsWith(\"prefix\");"]
+  },
+  {
+    "name": "subSequence",
+    "syntax": "CharSequence subSequence(int beginIndex, int endIndex)",
+    "keypoints": "Returns a new CharSequence that is a subsequence of this string.",
+    "description": "",
+    "examples": ["CharSequence subsequence = str.subSequence(0, 5);"]
+  },
+  {
+    "name": "substring",
+    "syntax": "String substring(int beginIndex)",
+    "keypoints": "Returns a new string that is a substring of this string, starting from the specified index.",
+    "description": "",
+    "examples": ["String substring = str.substring(2);"]
+  },
+
+  {
+    "name": "offsetByCodePoints",
+    "syntax": "int offsetByCodePoints(int index, int codePointOffset)",
+    "keypoints": "Returns the index within this string that is offset by the specified code point offset.",
+    "description": "",
+    "examples": ["int newIndex = str.offsetByCodePoints(0, 2);"]
+  },
+  {
+    "name": "regionMatches",
+    "syntax": "boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)",
+    "keypoints": "Compares a region of this string to a region of another string.",
+    "description": "",
+    "examples": [
+      "boolean matches = str.regionMatches(true, 0, \"anotherString\", 0, 5);"
+    ]
+  },
+  {
+    "name": "replace",
+    "syntax": "String replace(char oldChar, char newChar)",
+    "keypoints": "Returns a new string resulting from replacing all occurrences of a specified character with another character.",
+    "description": "",
+    "examples": ["String replacedString = str.replace('a', 'b');"]
+  },
+  {
+    "name": "replaceAll",
+    "syntax": "String replaceAll(String regex, String replacement)",
+    "keypoints": "Replaces each substring of this string that matches the given regular expression with the specified replacement string.",
+    "description": "",
+    "examples": ["String replacedString = str.replaceAll(\"\\s\", \"\");"]
+  },
+  {
+    "name": "replaceFirst",
+    "syntax": "String replaceFirst(String regex, String replacement)",
+    "keypoints": "Replaces the first substring of this string that matches the given regular expression with the specified replacement string.",
+    "description": "",
+    "examples": ["String replacedString = str.replaceFirst(\"abc\", \"def\");"]
+  },
+  {
+    "name": "split",
+    "syntax": "String[] split(String regex)",
+    "keypoints": "Splits this string around matches of the given regular expression.",
+    "description": "",
+    "examples": ["String[] substrings = str.split(\"\\s\");"]
+  },
+  {
+    "name": "startsWith",
+    "syntax": "boolean startsWith(String prefix)",
+    "keypoints": "Checks if this string starts with the specified prefix.",
+    "description": "",
+    "examples": ["boolean startsWith = str.startsWith(\"prefix\");"]
+  },
+  {
+    "name": "subSequence",
+    "syntax": "CharSequence subSequence(int beginIndex, int endIndex)",
+    "keypoints": "Returns a new CharSequence that is a subsequence of this string.",
+    "description": "",
+    "examples": ["CharSequence subsequence = str.subSequence(0, 5);"]
+  },
+  {
+    "name": "substring",
+    "syntax": "String substring(int beginIndex)",
+    "keypoints": "Returns a new string that is a substring of this string, starting from the specified index.",
+    "description": "",
+    "examples": ["String substring = str.substring(2);"]
+  },
+  {
+    "name": "substring",
+    "syntax": "String substring(int beginIndex, int endIndex)",
+    "keypoints": "Returns a new string that is a substring of this string, starting from the specified begin index and ending at the specified end index.",
+    "description": "",
+    "examples": ["String substring = str.substring(2, 5);"]
+  },
+  {
+    "name": "toCharArray",
+    "syntax": "char[] toCharArray()",
+    "keypoints": "Converts this string to a new character array.",
+    "description": "",
+    "examples": ["char[] charArray = str.toCharArray();"]
+  },
+  {
+    "name": "toLowerCase",
+    "syntax": "String toLowerCase(Locale locale)",
+    "keypoints": "Converts all the characters in this string to lowercase using the rules of the specified locale.",
+    "description": "",
+    "examples": ["String lowercaseString = str.toLowerCase(Locale.US);"]
+  },
+  {
+    "name": "toLowerCase",
+    "syntax": "String toLowerCase()",
+    "keypoints": "Converts all the characters in this string to lowercase using the rules of the default locale.",
+    "description": "",
+    "examples": ["String lowercaseString = str.toLowerCase();"]
+  },
+  {
+    "name": "toString",
+    "syntax": "String toString()",
+    "keypoints": "Returns a string representation of this object.",
+    "description": "",
+    "examples": ["String stringRepresentation = str.toString();"]
+  },
+  {
+    "name": "toUpperCase",
+    "syntax": "String toUpperCase(Locale locale)",
+    "keypoints": "Converts all the characters in this string to uppercase using the rules of the specified locale.",
+    "description": "",
+    "examples": ["String uppercaseString = str.toUpperCase(Locale.US);"]
+  },
+  {
+    "name": "toUpperCase",
+    "syntax": "String toUpperCase()",
+    "keypoints": "Converts all the characters in this string to uppercase using the rules of the default locale.",
+    "description": "",
+    "examples": ["String uppercaseString = str.toUpperCase();"]
+  }
+]

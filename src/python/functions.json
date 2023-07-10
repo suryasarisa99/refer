@@ -1,0 +1,224 @@
+[
+  {
+    "name": "abs",
+    "syntax": "abs(x)",
+    "description": "Returns the absolute value of a number.",
+    "examples": ["abs(-4.5)", "abs(3 + 4j)"],
+    "output": ["4.5", "5.0"]
+  },
+  {
+    "name": "all",
+    "syntax": "all(iterable)",
+    "description": "Returns True if all elements in an iterable are true.",
+    "examples": ["all([True, True, False])", "all([])"],
+    "output": ["False", "True"]
+  },
+  {
+    "name": "any",
+    "syntax": "any(iterable)",
+    "description": "Returns True if any element of an iterable is true.",
+    "examples": ["any([False, True, False])", "any([])"],
+    "output": ["True", "False"]
+  },
+  {
+    "name": "bin",
+    "syntax": "bin(x)",
+    "description": "Converts an integer to a binary string.",
+    "examples": ["bin(10)", "bin(-5)"],
+    "output": ["'0b1010'", "'-0b101'"]
+  },
+  {
+    "name": "bool",
+    "syntax": "bool(x)",
+    "description": "Converts a value to a Boolean.",
+    "examples": ["bool(0)", "bool('Hello')"],
+    "output": ["False", "True"]
+  },
+  {
+    "name": "chr",
+    "syntax": "chr(i)",
+    "description": "Returns a character from an integer (ASCII value).",
+    "examples": ["chr(65)", "chr(8364)"],
+    "output": ["'A'", "'€'"]
+  },
+  {
+    "name": "complex",
+    "syntax": "complex(real, imag)",
+    "description": "Returns a complex number.",
+    "examples": ["complex(2, 3)", "complex('5-6j')"],
+    "output": ["(2+3j)", "(5-6j)"]
+  },
+  {
+    "name": "divmod",
+    "syntax": "divmod(a, b)",
+    "description": "Returns the quotient and remainder of two numbers.",
+    "examples": ["divmod(10, 3)", "divmod(25.5, 4)"],
+    "output": ["(3, 1)", "(6.0, 1.5)"]
+  },
+  {
+    "name": "enumerate",
+    "syntax": "enumerate(iterable, start)",
+    "description": "Takes an iterable and returns an enumerate object that contains pairs of the form (index, element).",
+    "examples": [
+      "fruits = ['apple', 'banana', 'cherry']\nlist(enumerate(fruits))",
+      "list(enumerate('Hello', 1))"
+    ],
+    "output": [
+      "[(0, 'apple'), (1, 'banana'), (2, 'cherry')]",
+      "[(1, 'H'), (2, 'e'), (3, 'l'), (4, 'l'), (5, 'o')]"
+    ]
+  },
+  {
+    "name": "float",
+    "syntax": "float(x)",
+    "description": "Returns a floating-point number from a number or string.",
+    "examples": ["float(3)", "float('3.14')"],
+    "output": ["3.0", "3.14"]
+  },
+  {
+    "name": "format",
+    "syntax": "format(value, format_spec)",
+    "description": "Formats a specified value into a string.",
+    "examples": ["format(3.14159, '.2f')", "format(42, '0>5')"],
+    "output": ["'3.14'", "'00042'"]
+  },
+  {
+    "name": "hash",
+    "syntax": "hash(object)",
+    "description": "Returns the hash value of an object.",
+    "examples": ["hash('Hello')", "hash((1, 2, 3))"],
+    "output": ["2534834994151266175", "2528502973977326415"]
+  },
+  {
+    "name": "hex",
+    "syntax": "hex(x)",
+    "description": "Converts an integer to a hexadecimal string.",
+    "examples": ["hex(255)", "hex(16)"],
+    "output": ["'0xff'", "'0x10'"]
+  },
+  {
+    "name": "id",
+    "syntax": "id(object)",
+    "description": "Returns the identity of an object.",
+    "examples": ["x = 42\nid(x)", "y = 'Hello'\nid(y)"],
+    "output": ["140732925326768", "2302887242880"]
+  },
+  {
+    "name": "int",
+    "syntax": "int(x, base)",
+    "description": "Returns an integer from a number or string.",
+    "examples": ["int(3.14)", "int('1010', 2)"],
+    "output": ["3", "10"]
+  },
+  {
+    "name": "isinstance",
+    "syntax": "isinstance(object, classinfo)",
+    "description": "Checks if an object is an instance of a specified class or of a subclass thereof.",
+    "examples": ["isinstance(3.14, float)", "isinstance('Hello', int)"],
+    "output": ["True", "False"]
+  },
+  {
+    "name": "len",
+    "syntax": "len(s)",
+    "description": "Returns the length of an object (string, list, tuple, etc.).",
+    "examples": ["len('Hello')", "len([1, 2, 3])"],
+    "output": ["5", "3"]
+  },
+  {
+    "name": "max",
+    "syntax": "max(iterable, *[, key, default])",
+    "description": "Returns the largest item in an iterable or the largest of two or more arguments.",
+    "examples": ["max(5, 2, 9, 1)", "max(['apple', 'banana', 'cherry'])"],
+    "output": ["9", "'cherry'"]
+  },
+  {
+    "name": "min",
+    "syntax": "min(iterable, *[, key, default])",
+    "description": "Returns the smallest item in an iterable or the smallest of two or more arguments.",
+    "examples": ["min(5, 2, 9, 1)", "min(['apple', 'banana', 'cherry'])"],
+    "output": ["1", "'apple'"]
+  },
+  {
+    "name": "next",
+    "syntax": "next(iterator[, default])",
+    "description": "Retrieves the next item from an iterator.",
+    "examples": [
+      "my_list = iter([1, 2, 3])\nnext(my_list)",
+      "my_tuple = iter(('a', 'b', 'c'))\nnext(my_tuple, 'No more items')"
+    ],
+    "output": ["1", "'a'"]
+  },
+  {
+    "name": "oct",
+    "syntax": "oct(x)",
+    "description": "Converts an integer to an octal string.",
+    "examples": ["oct(8)", "oct(16)"],
+    "output": ["'0o10'", "'0o20'"]
+  },
+  {
+    "name": "ord",
+    "syntax": "ord(c)",
+    "description": "Returns the Unicode code point for a one-character string.",
+    "examples": ["ord('A')", "ord('€')"],
+    "output": ["65", "8364"]
+  },
+  {
+    "name": "pow",
+    "syntax": "pow(base, exp[, mod])",
+    "description": "Raises one number to the power of another number (with optional modulo).",
+    "examples": ["pow(2, 3)", "pow(2, 3, 5)"],
+    "output": ["8", "3"]
+  },
+  {
+    "name": "range",
+    "syntax": "range(start, stop[, step])",
+    "description": "Generates a sequence of numbers from start to stop by step increments.",
+    "examples": ["list(range(5))", "list(range(1, 10, 2))"],
+    "output": ["[0, 1, 2, 3, 4]", "[1, 3, 5, 7, 9]"]
+  },
+  {
+    "name": "repr",
+    "syntax": "repr(object)",
+    "description": "Returns a string that can be used to recreate an object (for debugging).",
+    "examples": ["repr('Hello')", "repr([1, 2, 3])"],
+    "output": ["'Hello'", "[1, 2, 3]"]
+  },
+  {
+    "name": "round",
+    "syntax": "round(number[, ndigits])",
+    "description": "Rounds a number to a specified precision (default is 0).",
+    "examples": ["round(3.14159)", "round(2.71828, 2)"],
+    "output": ["3", "2.72"]
+  },
+  {
+    "name": "sorted",
+    "syntax": "sorted(iterable[, key, reverse])",
+    "description": "Sorts items in an iterable and returns them as a list.",
+    "examples": [
+      "sorted([5, 2, 9, 1])",
+      "sorted(['apple', 'banana', 'cherry'])"
+    ],
+    "output": ["[1, 2, 5, 9]", "['apple', 'banana', 'cherry']"]
+  },
+  {
+    "name": "str",
+    "syntax": "str(object)",
+    "description": "Converts a value to a string.",
+    "examples": ["str(42)", "str([1, 2, 3])"],
+    "output": ["'42'", "'[1, 2, 3]'"]
+  },
+  {
+    "name": "sum",
+    "syntax": "sum(iterable[, start])",
+    "description": "Adds up all items in an iterable (with optional start value).",
+    "examples": ["sum([1, 2, 3, 4, 5])", "sum([1, 2, 3, 4, 5], 10)"],
+    "output": ["15", "25"]
+  },
+  {
+    "name": "type",
+    "syntax": "type(object)",
+    "description": "Returns the type of an object.",
+    "examples": ["type(42)", "type('Hello')"],
+    "output": ["<class 'int'>", "<class 'str'>"]
+  }
+]

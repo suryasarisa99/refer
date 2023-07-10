@@ -1,0 +1,4 @@
+@font-face {
+  font-family: "FiraCode-Medium.ttf";
+  src: local("FiraCode"), url("./FiraCode-Medium.ttf") format("truetype");
+}
