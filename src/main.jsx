@@ -4,6 +4,8 @@ import App from "./App";
 import "./fonts/FiraCode-Medium.ttf";
 import { BrowserRouter } from "react-router-dom";
 import DataProvider from "../context/DataContext";
+import { registerSW } from "virtual:pwa-register";
+registerSW();
 ReactDOM.createRoot(document.querySelector("#root")).render(
   <>
     <DataProvider>
