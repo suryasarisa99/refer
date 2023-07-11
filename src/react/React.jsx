@@ -4,7 +4,7 @@ import hooks from "./hooks.json";
 export default () => {
   return (
     <div className="lang-page">
-      <Item item="Hooks" data={hooks} />
+      <Item item="Hooks" lang="react" data={hooks} />
     </div>
   );
 };

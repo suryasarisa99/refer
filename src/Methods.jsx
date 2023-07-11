@@ -38,7 +38,7 @@ export default ({ searchResults }) => {
       {query.length > 0
         ? methods
             .filter((method) => {
-              return method.name.toLowerCase().startsWith(query.toLowerCase());
+              return method.name.toLowerCase().includes(query.toLowerCase());
             })
             .map((item, index) => {
               return (

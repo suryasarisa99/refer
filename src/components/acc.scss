@@ -7,9 +7,10 @@ body {
   background-color: rgb(0, 0, 0);
   font-family: "Fira Code";
   color: white;
+  height: 100vh;
 }
 .acc {
-  max-width: 450px;
+  max-width: 600px;
   background-color: black;
   margin: 0px auto;
   border: 1px solid rgb(27, 27, 27);
@@ -162,7 +163,7 @@ body {
 
 .home {
   // background-color: ;
-  margin-top: 40px;
+  padding-top: 40px;
 
   .lang {
     padding: 10px 24px;
@@ -214,5 +215,56 @@ code {
 }
 
 .lang-page {
-  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.table {
+  margin-bottom: 30px;
+  // border-radius: 5px;
+  font-size: 14px;
+  .bracket {
+    color: rgb(244, 78, 225);
+  }
+  .row {
+    display: flex;
+    padding: 3px;
+    padding: 8px;
+    align-items: center;
+    border: 1px solid rgba(3, 159, 255, 0.845);
+    &:first-child {
+      .first {
+        color: rgb(255, 0, 221);
+      }
+      .last {
+        color: greenyellow;
+      }
+    }
+    .first {
+      width: 94px;
+      flex-shrink: 0;
+      padding-left: 5px;
+    }
+    .last {
+      flex-grow: 1;
+    }
+  }
+}
+
+// .table {
+//   margin-bottom: 30px;
+//   display: grid;
+//   grid-template-columns: minmax(50px, 96px) 1fr;
+// }
+
+.function1 {
+  color: rgb(253, 0, 220);
+}
+.function2 {
+  color: yellowgreen;
+}
+.function {
+  color: rgb(0, 238, 255);
+}
+.bracket {
+  color: yellow;
 }

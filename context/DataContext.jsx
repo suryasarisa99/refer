@@ -28,8 +28,11 @@ export default ({ children }) => {
     // { data: [], type: "java" },
   ];
   let [methods, setMethods] = useState([]);
+  let [langType, setLangType] = useState("");
   return (
-    <DataContext.Provider value={{ setMethods, methods, data }}>
+    <DataContext.Provider
+      value={{ setMethods, methods, data, setLangType, langType }}
+    >
       {children}
     </DataContext.Provider>
   );

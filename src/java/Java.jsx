@@ -10,9 +10,9 @@ export default () => {
   let navigate = useNavigate();
   return (
     <div className="lang-page">
-      <Item item="Liste Methods" data={linked_list} />
-      <Item item="String Methods" data={strings} />
-      <Item item="Array Methods" data={array} />
+      <Item item="Liste Methods" lang="java" data={linked_list} />
+      <Item item="String Methods" lang="java" data={strings} />
+      <Item item="Array Methods" lang="java" data={array} />
     </div>
   );
 };

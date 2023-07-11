@@ -2,6 +2,10 @@ import "./acc.css";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { motion, animate, AnimatePresence } from "framer-motion";
 import { AiFillCaretDown } from "react-icons/ai";
+// import "prismjs/themes/prism.css";
+// import Prism from "prismjs";
+import { useEffect, useContext } from "react";
+import { DataContext } from "../../context/DataContext";
 import {
   dracula,
   docco,
@@ -10,10 +14,14 @@ import {
 } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { useState } from "react";
 export default ({ data, state, index, onClick, lang, group }) => {
+  // useEffect(() => {
+  //   Prism.highlightAll();
+  // }, []);
+  let { langType } = useContext(DataContext);
   return (
     <div className="acc">
       <div className="acc-head" onClick={() => onClick(index)}>
-        {lang && (
+        {group && (
           <p className="secondary-head">
             <span className="lang-type">{lang}</span> |{" "}
             <span className="group-type">{group}</span>
@@ -35,62 +43,29 @@ export default ({ data, state, index, onClick, lang, group }) => {
           >
             <div className="acc-body">
               {/* <h4 className="syntax">{data.syntax}</h4> */}
-              <Syntax syntax={data.syntax} />
+              {langType == "java" ? (
+                <JavaSyntax syntax={data.syntax} />
+              ) : (
+                <Syntax syntax={data.syntax} />
+              )}
+              {/* <Syntax syntax={data.syntax} /> */}
               <p className="keypoints">{data.keypoints || data.description}</p>
+              {data.attributes && <Properties props={data.attributes} />}
               {data.examples.map((example, index) => {
                 if (typeof example === "string")
                   return (
                     <div>
-                      <code>
-                        <SyntaxHighlighter
-                          className=".code"
-                          language="javascript"
-                          style={dracula}
-                          customStyle={{
-                            backgroundColor: "rgb(44, 44, 44)",
-                            fontSize: "17px",
-                            fontFamily: "Fira Code",
-                            padding: "15px 8px",
-                            margin: "5px 2px",
-                            borderRadius: "8px",
-                            scrollbarWidth: "thin",
-                            msOverflowStyle: "none",
-                          }}
-                        >
-                          {example}
-                        </SyntaxHighlighter>
-                      </code>
+                      <CodeBlock code={example} langType={langType} />
                       {data?.output?.length >= index - 1 &&
                         data?.output[index] && (
-                          <div className="output-box">
-                            <div className="output-title">Output: </div>
-                            <div className="output">{data.output[index]}</div>
-                          </div>
+                          <Output output={data.output[index]} />
                         )}
                     </div>
                   );
                 else {
                   return (
                     <div>
-                      <code>
-                        <SyntaxHighlighter
-                          className=".code"
-                          language="javascript"
-                          style={dracula}
-                          customStyle={{
-                            backgroundColor: "rgb(44, 44, 44)",
-                            fontSize: "17px",
-                            fontFamily: "Fira Code",
-                            padding: "15px 8px",
-                            margin: "5px 2px",
-                            borderRadius: "8px",
-                            scrollbarWidth: "thin",
-                            msOverflowStyle: "none",
-                          }}
-                        >
-                          {example.example}
-                        </SyntaxHighlighter>
-                      </code>
+                      <CodeBlock code={example.example} langType={langType} />
                       {example.output && (
                         <div className="output-box">
                           <div className="output-title">Output: </div>
@@ -109,7 +84,7 @@ export default ({ data, state, index, onClick, lang, group }) => {
   );
 };
 
-function Syntax({ syntax }) {
+function JavaSyntax({ syntax }) {
   // let syntax = "int methodName (int  x  ,int y, int z )";
   let reg = RegExp(
     "(?<returntype>.+)\\s+(?<function>\\w+)\\s*\\((?<params>[^)]*)\\)"
@@ -148,6 +123,109 @@ function Syntax({ syntax }) {
         <span className="params"> {params} </span>
         <span className="bracket">)</span>
       </p>
+    </div>
+  );
+}
+
+function Properties({ props }) {
+  return (
+    <div className="table">
+      <div className="row">
+        <div className="first">Poperty</div>
+        <div className="last">Values</div>
+      </div>
+      {Object.entries(props).map(([key, value], index) => {
+        return (
+          <div className="row">
+            {value.toString().startsWith("Optional") ? (
+              <div className="first">
+                <span className="bracket">[</span>
+                {key}
+                <span className="bracket">] </span>
+              </div>
+            ) : (
+              <div className="first">{key}</div>
+            )}
+            <div className="last">
+              {value.toString().replace("Optional: ", "")}{" "}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function Syntax({ syntax }) {
+  let regx = RegExp(
+    "(?<lhs>(\\w+\\s*\\=)?)\\s*(?<a>\\w+)\\.(?<b>\\w*)(?<lb>\\(?)(?<params>.*)(?<rb>\\))"
+  );
+  // let regx =
+  // RegExp();
+  // "((?<lhs>\\w+)\\s*(?<eq>\\=?))(?=(\\s*(?<a>\\w+)\\.(?<b>\\w*)\\.?(?<c>.*)(?<lb>\\(?)(?<params>.*)(?<rb>\\))|$))"
+
+  let match = regx.exec(syntax);
+  if (!match?.groups) {
+    let f = syntax.split(".");
+    return (
+      <>
+        <span className="function1">{f[0]}</span>
+        {f[1] && <span className="function2">.{f[1]}</span>}
+      </>
+    );
+  }
+  let { lhs, eq, a, b, c, params, lb, rb } = match.groups;
+  console.log(match.groups);
+
+  return (
+    <div className="syntax-box">
+      <p className="syntax-title">Syntax: </p>
+      <p className="syntax">
+        {lhs && <span className="lhs">lhs = </span>}
+        {/* {eq && <span className="eq-operator">=</span>} */}
+        <span className="function1">{a}</span>
+        {b && <span className="function2">.{b}</span>}
+        {c && <span className="function3">.{c}</span>}
+        {lb && <span className="bracket">(</span>}
+        {params && <span className="params">{params}</span>}
+        {rb && <span className="bracket">)</span>}
+      </p>
+    </div>
+  );
+}
+
+function CodeBlock({ code, langType }) {
+  return (
+    <pre>
+      <code>
+        <SyntaxHighlighter
+          className=".code"
+          language={langType}
+          style={dracula}
+          wrapLines={true}
+          customStyle={{
+            backgroundColor: "rgb(44, 44, 44)",
+            fontSize: "17px",
+            fontFamily: "Fira Code",
+            padding: "15px 8px",
+            margin: "5px 2px",
+            borderRadius: "8px",
+            scrollbarWidth: "thin",
+            msOverflowStyle: "none",
+          }}
+        >
+          {code}
+        </SyntaxHighlighter>
+      </code>
+    </pre>
+  );
+}
+
+function Output({ output }) {
+  return (
+    <div className="output-box">
+      <div className="output-title">Output: </div>
+      <div className="output">{output}</div>
     </div>
   );
 }

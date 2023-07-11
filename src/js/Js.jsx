@@ -6,8 +6,8 @@ import strings from "./strings.json";
 export default () => {
   return (
     <div className="lang-page">
-      <Item item="List Methods" data={list} />
-      <Item item="String Methods" data={strings} />
+      <Item item="List Methods" lang={"javascript"} data={list} />
+      <Item item="String Methods" lang={"javascript"} data={strings} />
     </div>
   );
 };

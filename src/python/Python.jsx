@@ -9,13 +9,13 @@ import numpy from "./numpy.json";
 export default () => {
   return (
     <div className="lang-page">
-      <Item item="String Methods" data={strings} />
-      <Item item="List Methods" data={lists} />
-      <Item item="Functions" data={functions} />
-      <Item item="Dictinory Methods" data={dictinory} />
-      <Item item="sets Methods" data={sets} />
-      <Item item="random Methods" data={random} />
-      <Item item="numpy Methods" data={numpy} />
+      <Item item="String Methods" lang="python" data={strings} />
+      <Item item="List Methods" lang="python" data={lists} />
+      <Item item="Functions" lang="python" data={functions} />
+      <Item item="Dictinory Methods" lang="python" data={dictinory} />
+      <Item item="sets Methods" lang="python" data={sets} />
+      <Item item="random Methods" lang="python" data={random} />
+      <Item item="numpy Methods" lang="python" data={numpy} />
     </div>
   );
 };
