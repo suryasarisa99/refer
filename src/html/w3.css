@@ -1,0 +1,158 @@
+.w3-page a {
+  display: none;
+}
+
+.w3-example a {
+  padding: 5px;
+  display: inline;
+}
+.w3-example h3 {
+  color: rgb(0, 255, 0);
+}
+.w3-example h3 + p {
+  color: rgb(108, 213, 255);
+}
+
+.w3-code {
+  background-color: rgb(30, 31, 40);
+  border-radius: 20px;
+  padding: 15px 12px;
+  margin: 20px 2px;
+  overflow-x: auto;
+}
+
+.w3-items {
+  background-color: black;
+  margin: 8px 2px;
+  border: 1px solid rgb(57, 57, 57);
+}
+
+.definition {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 0px;
+  padding-left: 12px;
+}
+.definition ul {
+  margin-left: 20px;
+}
+.definition p:last-of-type() {
+  margin-bottom: 20px;
+}
+.definition hr {
+  display: none;
+}
+
+.w3-title {
+  font-size: 22px;
+  padding: 10px;
+  background-color: rgb(45, 26, 45);
+  text-align: center;
+  color: rgb(255, 0, 162);
+}
+
+.w3-subtitle {
+  color: rgb(255, 0, 208);
+  font-size: 16px;
+}
+.w3-subtitle div,
+.w3-subtitle p,
+.w3-subtitle ul,
+.w3-subtitle li {
+  color: rgb(144, 255, 144);
+}
+
+a {
+  color: rgb(255, 0, 162);
+}
+
+.w3-codespan {
+  color: red;
+}
+
+.w3-page .attributes {
+  overflow-x: auto;
+  background-color: red;
+}
+.w3-page .title {
+  color: green;
+  padding: 20px;
+}
+.w3-page .title .subtitle {
+  display: none;
+}
+.w3-page .title .data {
+  color: rgb(255, 0, 230);
+  font-size: 24px;
+}
+.w3-page .keypoints {
+  font-size: 20px;
+  margin: 15px 5px;
+  color: rgb(255, 0, 230);
+}
+.w3-page .keypoints .data {
+  color: white;
+  padding-left: 10px;
+  font-size: 17px;
+}
+.w3-page .url,
+.w3-page .w3-note,
+.w3-page .related-pages {
+  display: none;
+}
+.w3-page .example .subtitle {
+  margin: 10px;
+  display: none;
+}
+.w3-page .w3-example {
+  margin: 10px 0;
+  border-radius: 12px;
+}
+.w3-page .description {
+  background-color: rgb(0, 0, 0);
+  margin: 20px 5px;
+  padding: 15px;
+}
+.w3-page .description .subtitle {
+  color: greenyellow;
+}
+.w3-page .description hr {
+  display: none;
+}
+.w3-page .syntax {
+  background-color: rgb(0, 0, 0);
+  margin: 15px 5px;
+}
+.w3-page .syntax .subtitle {
+  color: rgb(0, 255, 0);
+}
+.w3-page .parameters {
+  margin: 15px 4px;
+  padding: 10px;
+}
+.w3-page .parameters .subtitle {
+  color: rgb(64, 255, 0);
+}
+.w3-page .block {
+  margin: 25px 8px;
+}
+.w3-page .block .subtitle,
+.w3-page .block h2 {
+  color: rgb(17, 255, 0);
+  margin-bottom: 15px;
+}
+.w3-page .block hr {
+  display: none;
+}
+
+.keyword-public,
+.token.keyword.keyword-class {
+  color: green;
+}
+
+.w3-items {
+  padding: 10px 20px;
+  margin-left: 5px;
+  margin-right: 8px;
+}/*# sourceMappingURL=w3.css.map */

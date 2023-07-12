@@ -1,6 +1,6 @@
 import Item from "../components/Item";
 import obj from "./obj.json";
-import "./w3.scss";
+import "./w3.css";
 export default () => {
   return (
     <div className="lang-page">
