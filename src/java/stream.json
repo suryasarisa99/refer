@@ -1,0 +1,448 @@
+[
+  {
+    "name": "allMatch",
+    "syntax": "stream.allMatch(predicate)",
+    "description": "Checks if all elements in the stream match the given predicate.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nboolean allEven = numbers.stream().allMatch(n -> n % 2 == 0);\nSystem.out.println(allEven);",
+        "output": "false"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nboolean allStartWithJ = names.stream().allMatch(s -> s.startsWith(\"J\"));\nSystem.out.println(allStartWithJ);",
+        "output": "true"
+      },
+      {
+        "example": "List<Integer> numbers = Arrays.asList(2, 4, 6, 8, 10);\nboolean allGreaterThanFive = numbers.stream().allMatch(n -> n > 5);\nSystem.out.println(allGreaterThanFive);",
+        "output": "true"
+      }
+    ]
+  },
+  {
+    "name": "anyMatch",
+    "syntax": "stream.anyMatch(predicate)",
+    "description": "Checks if any element in the stream matches the given predicate.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nboolean anyEven = numbers.stream().anyMatch(n -> n % 2 == 0);\nSystem.out.println(anyEven);",
+        "output": "true"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nboolean anyStartWithA = names.stream().anyMatch(s -> s.startsWith(\"A\"));\nSystem.out.println(anyStartWithA);",
+        "output": "false"
+      },
+      {
+        "example": "List<Integer> numbers = Arrays.asList(2, 4, 6, 8, 10);\nboolean anyGreaterThanTen = numbers.stream().anyMatch(n -> n > 10);\nSystem.out.println(anyGreaterThanTen);",
+        "output": "false"
+      }
+    ]
+  },
+  {
+    "name": "close",
+    "syntax": "stream.close()",
+    "description": "Closes the stream and releases any system resources associated with it.",
+    "examples": [
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nStream<String> stream = names.stream();\nstream.close();",
+        "output": ""
+      },
+      {
+        "example": "Set<Integer> numbers = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5));\nStream<Integer> stream = numbers.stream();\nstream.close();",
+        "output": ""
+      }
+    ]
+  },
+  {
+    "name": "collect",
+    "syntax": "stream.collect(collector)",
+    "description": "Performs a mutable reduction operation on the elements of the stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nList<Integer> squaredNumbers = numbers.stream().map(n -> n * n).collect(Collectors.toList());\nSystem.out.println(squaredNumbers);",
+        "output": "[1, 4, 9, 16, 25]"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nString concatenatedNames = names.stream().collect(Collectors.joining(\", \"));\nSystem.out.println(concatenatedNames);",
+        "output": "John, Jane, Jack"
+      },
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nint sum = numbers.stream().collect(Collectors.summingInt(n -> n));\nSystem.out.println(sum);",
+        "output": "15"
+      }
+    ]
+  },
+  {
+    "name": "count",
+    "syntax": "stream.count()",
+    "description": "Returns the count of elements in the stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nlong count = numbers.stream().count();\nSystem.out.println(count);",
+        "output": "5"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nlong count = names.stream().count();\nSystem.out.println(count);",
+        "output": "3"
+      },
+      {
+        "example": "List<Integer> numbers = Arrays.asList();\nlong count = numbers.stream().count();\nSystem.out.println(count);",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "name": "distinct",
+    "syntax": "stream.distinct()",
+    "description": "Returns a stream with only distinct elements from the original stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 2, 3, 3, 3, 4, 4, 4, 4);\nList<Integer> distinctNumbers = numbers.stream().distinct().collect(Collectors.toList());\nSystem.out.println(distinctNumbers);",
+        "output": "[1, 2, 3, 4]"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"John\", \"Jack\", \"Jane\");\nList<String> distinctNames = names.stream().distinct().collect(Collectors.toList());\nSystem.out.println(distinctNames);",
+        "output": "[John, Jane, Jack]"
+      }
+    ]
+  },
+  {
+    "name": "filter",
+    "syntax": "stream.filter(predicate)",
+    "description": "Returns a stream consisting of the elements that match the given predicate.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nList<Integer> evenNumbers = numbers.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());\nSystem.out.println(evenNumbers);",
+        "output": "[2, 4]"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nList<String> namesWithJ = names.stream().filter(s -> s.startsWith(\"J\")).collect(Collectors.toList());\nSystem.out.println(namesWithJ);",
+        "output": "[John, Jane, Jack]"
+      },
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nList<Integer> oddNumbers = numbers.stream().filter(n -> n % 2 != 0).collect(Collectors.toList());\nSystem.out.println(oddNumbers);",
+        "output": "[1, 3, 5]"
+      }
+    ]
+  },
+
+  {
+    "name": "findAny",
+    "syntax": "stream.findAny()",
+    "description": "Returns an arbitrary element from the stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nOptional<Integer> anyNumber = numbers.stream().findAny();\nSystem.out.println(anyNumber.orElse(null));",
+        "output": "1"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nOptional<String> anyName = names.stream().findAny();\nSystem.out.println(anyName.orElse(null));",
+        "output": "John"
+      }
+    ]
+  },
+  {
+    "name": "findFirst",
+    "syntax": "stream.findFirst()",
+    "description": "Returns the first element in the stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nOptional<Integer> firstNumber = numbers.stream().findFirst();\nSystem.out.println(firstNumber.orElse(null));",
+        "output": "1"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nOptional<String> firstName = names.stream().findFirst();\nSystem.out.println(firstName.orElse(null));",
+        "output": "John"
+      }
+    ]
+  },
+  {
+    "name": "flatMap",
+    "syntax": "stream.flatMap(mapper)",
+    "description": "Transforms each element of the stream into a stream of other elements and then concatenates them into a single stream.",
+    "examples": [
+      {
+        "example": "List<List<Integer>> nestedNumbers = Arrays.asList(Arrays.asList(1, 2), Arrays.asList(3, 4), Arrays.asList(5, 6));\nList<Integer> flattenedNumbers = nestedNumbers.stream().flatMap(List::stream).collect(Collectors.toList());\nSystem.out.println(flattenedNumbers);",
+        "output": "[1, 2, 3, 4, 5, 6]"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nList<Character> characters = names.stream().flatMap(s -> s.chars().mapToObj(c -> (char) c)).collect(Collectors.toList());\nSystem.out.println(characters);",
+        "output": "[J, o, h, n, J, a, n, e, J, a, c, k]"
+      }
+    ]
+  },
+  {
+    "name": "forEach",
+    "syntax": "stream.forEach(action)",
+    "description": "Performs an action for each element in the stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nnumbers.stream().forEach(System.out::println);",
+        "output": "1\n2\n3\n4\n5"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nnames.stream().forEach(System.out::println);",
+        "output": "John\nJane\nJack"
+      }
+    ]
+  },
+  {
+    "name": "forEachOrdered",
+    "syntax": "stream.forEachOrdered(action)",
+    "description": "Performs an action for each element in the stream, in the encounter order.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nnumbers.stream().forEachOrdered(System.out::println);",
+        "output": "1\n2\n3\n4\n5"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nnames.stream().forEachOrdered(System.out::println);",
+        "output": "John\nJane\nJack"
+      }
+    ]
+  },
+  {
+    "name": "isParallel",
+    "syntax": "stream.isParallel()",
+    "description": "Checks if the stream is executed in parallel.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nboolean isParallel = numbers.parallelStream().isParallel();\nSystem.out.println(isParallel);",
+        "output": "true"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nboolean isParallel = names.stream().isParallel();\nSystem.out.println(isParallel);",
+        "output": "false"
+      }
+    ]
+  },
+
+  {
+    "name": "iterator",
+    "syntax": "stream.iterator()",
+    "description": "Returns an iterator for the elements in the stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nIterator<Integer> iterator = numbers.stream().iterator();\nwhile (iterator.hasNext()) {\n  Integer number = iterator.next();\n  System.out.println(number);\n}",
+        "output": "1\n2\n3\n4\n5"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nIterator<String> iterator = names.stream().iterator();\nwhile (iterator.hasNext()) {\n  String name = iterator.next();\n  System.out.println(name);\n}",
+        "output": "John\nJane\nJack"
+      }
+    ]
+  },
+  {
+    "name": "limit",
+    "syntax": "stream.limit(maxSize)",
+    "description": "Truncates the stream to a maximum size specified by maxSize.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nList<Integer> limitedNumbers = numbers.stream().limit(3).collect(Collectors.toList());\nSystem.out.println(limitedNumbers);",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nList<String> limitedNames = names.stream().limit(2).collect(Collectors.toList());\nSystem.out.println(limitedNames);",
+        "output": "[John, Jane]"
+      }
+    ]
+  },
+  {
+    "name": "map",
+    "syntax": "stream.map(mapper)",
+    "description": "Applies a mapping function to each element of the stream and returns a new stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nList<Integer> squaredNumbers = numbers.stream().map(n -> n * n).collect(Collectors.toList());\nSystem.out.println(squaredNumbers);",
+        "output": "[1, 4, 9, 16, 25]"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nList<Integer> nameLengths = names.stream().map(String::length).collect(Collectors.toList());\nSystem.out.println(nameLengths);",
+        "output": "[4, 4, 4]"
+      },
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nList<String> numberStrings = numbers.stream().map(Object::toString).collect(Collectors.toList());\nSystem.out.println(numberStrings);",
+        "output": "[\"1\", \"2\", \"3\", \"4\", \"5\"]"
+      }
+    ]
+  },
+  {
+    "name": "max",
+    "syntax": "stream.max(comparator)",
+    "description": "Returns the maximum element of the stream according to the provided comparator.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 3, 2, 5, 4);\nOptional<Integer> maxNumber = numbers.stream().max(Integer::compare);\nSystem.out.println(maxNumber.orElse(null));",
+        "output": "5"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nOptional<String> maxName = names.stream().max(String::compareTo);\nSystem.out.println(maxName.orElse(null));",
+        "output": "John"
+      }
+    ]
+  },
+  {
+    "name": "min",
+    "syntax": "stream.min(comparator)",
+    "description": "Returns the minimum element of the stream according to the provided comparator.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(5, 3, 1, 4, 2);\nOptional<Integer> minNumber = numbers.stream().min(Integer::compare);\nSystem.out.println(minNumber.orElse(null));",
+        "output": "1"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nOptional<String> minName = names.stream().min(String::compareTo);\nSystem.out.println(minName.orElse(null));",
+        "output": "Jack"
+      }
+    ]
+  },
+  {
+    "name": "noneMatch",
+    "syntax": "stream.noneMatch(predicate)",
+    "description": "Checks if no elements in the stream match the given predicate.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nboolean noneNegative = numbers.stream().noneMatch(n -> n >= 0);\nSystem.out.println(noneNegative);",
+        "output": "false"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nboolean noneEmpty = names.stream().noneMatch(String::isEmpty);\nSystem.out.println(noneEmpty);",
+        "output": "true"
+      }
+    ]
+  },
+  {
+    "name": "onClose",
+    "syntax": "stream.onClose(action)",
+    "description": "Registers an action to be performed when the stream is closed.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nStream<Integer> stream = numbers.stream().onClose(() -> System.out.println(\"Stream closed\"));\nstream.close();",
+        "output": "Stream closed"
+      },
+      {
+        "example": "Set<String> names = new HashSet<>(Arrays.asList(\"John\", \"Jane\", \"Jack\"));\nStream<String> stream = names.stream().onClose(() -> System.out.println(\"Stream closed\"));\nstream.close();",
+        "output": "Stream closed"
+      }
+    ]
+  },
+  {
+    "name": "parallel",
+    "syntax": "stream.parallel()",
+    "description": "Returns a parallel stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nboolean isParallel = numbers.stream().parallel().isParallel();\nSystem.out.println(isParallel);",
+        "output": "true"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nboolean isParallel = names.stream().parallel().isParallel();\nSystem.out.println(isParallel);",
+        "output": "true"
+      }
+    ]
+  },
+  {
+    "name": "peek",
+    "syntax": "stream.peek(action)",
+    "description": "Performs an action on each element of the stream without affecting the stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nnumbers.stream().peek(System.out::println).collect(Collectors.toList());",
+        "output": "1\n2\n3\n4\n5"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nnames.stream().peek(System.out::println).collect(Collectors.toList());",
+        "output": "John\nJane\nJack"
+      }
+    ]
+  },
+  {
+    "name": "reduce",
+    "syntax": "stream.reduce(identity, accumulator)",
+    "description": "Performs a reduction on the elements of the stream using the provided identity value and accumulator function.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nint sum = numbers.stream().reduce(0, (a, b) -> a + b);\nSystem.out.println(sum);",
+        "output": "15"
+      },
+      {
+        "example": "List<String> names = Arrays.asList(\"John\", \"Jane\", \"Jack\");\nString concatenatedNames = names.stream().reduce(\"\", (a, b) -> a + b);\nSystem.out.println(concatenatedNames);",
+        "output": "JohnJaneJack"
+      }
+    ]
+  },
+  {
+    "name": "sequential",
+    "syntax": "stream.sequential()",
+    "description": "Returns a sequential stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nboolean isSequential = numbers.stream().sequential().isParallel();\nSystem.out.println(isSequential);",
+        "output": "false"
+      },
+      {
+        "example": "List<String> names = Arrays.asList('John', 'Jane', 'Jack');\nboolean isSequential = names.stream().sequential().isParallel();\nSystem.out.println(isSequential);",
+        "output": "false"
+      }
+    ]
+  },
+  {
+    "name": "skip",
+    "syntax": "stream.skip(n)",
+    "description": "Skips the first n elements of the stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nList<Integer> skippedNumbers = numbers.stream().skip(2).collect(Collectors.toList());\nSystem.out.println(skippedNumbers);",
+        "output": "[3, 4, 5]"
+      },
+      {
+        "example": "List<String> names = Arrays.asList('John', 'Jane', 'Jack');\nList<String> skippedNames = names.stream().skip(1).collect(Collectors.toList());\nSystem.out.println(skippedNames);",
+        "output": "[Jane, Jack]"
+      }
+    ]
+  },
+  {
+    "name": "sorted",
+    "syntax": "stream.sorted()",
+    "description": "Returns a stream with the elements sorted in natural order.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(3, 1, 4, 2, 5);\nList<Integer> sortedNumbers = numbers.stream().sorted().collect(Collectors.toList());\nSystem.out.println(sortedNumbers);",
+        "output": "[1, 2, 3, 4, 5]"
+      },
+      {
+        "example": "List<String> names = Arrays.asList('John', 'Jane', 'Jack');\nList<String> sortedNames = names.stream().sorted().collect(Collectors.toList());\nSystem.out.println(sortedNames);",
+        "output": "[Jack, Jane, John]"
+      }
+    ]
+  },
+  {
+    "name": "spliterator",
+    "syntax": "stream.spliterator()",
+    "description": "Returns a Spliterator over the elements in the stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nSpliterator<Integer> spliterator = numbers.stream().spliterator();\nwhile (spliterator.tryAdvance(System.out::println));",
+        "output": "1\n2\n3\n4\n5"
+      },
+      {
+        "example": "List<String> names = Arrays.asList('John', 'Jane', 'Jack');\nSpliterator<String> spliterator = names.stream().spliterator();\nwhile (spliterator.tryAdvance(System.out::println));",
+        "output": "John\nJane\nJack"
+      }
+    ]
+  },
+  {
+    "name": "toArray",
+    "syntax": "stream.toArray()",
+    "description": "Returns an array containing the elements of the stream.",
+    "examples": [
+      {
+        "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nInteger[] numberArray = numbers.stream().toArray(Integer[]::new);\nSystem.out.println(Arrays.toString(numberArray));",
+        "output": "[1, 2, 3, 4, 5]"
+      },
+      {
+        "example": "List<String> names = Arrays.asList('John', 'Jane', 'Jack');\nString[] nameArray = names.stream().toArray(String[]::new);\nSystem.out.println(Arrays.toString(nameArray));",
+        "output": "[John, Jane, Jack]"
+      }
+    ]
+  }
+]
