@@ -27,6 +27,11 @@ export default () => {
         Icon={FaReact}
         onClick={() => navigation("/react")}
       />
+      <Lang
+        lang={"W3 Schhols"}
+        Icon={FaReact}
+        onClick={() => navigation("/w3")}
+      />
     </div>
   );
 };

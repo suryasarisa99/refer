@@ -1,16 +1,17 @@
 import "./acc.css";
-import SyntaxHighlighter from "react-syntax-highlighter";
 import { motion, animate, AnimatePresence } from "framer-motion";
 import { AiFillCaretDown } from "react-icons/ai";
-// import "prismjs/themes/prism.css";
-// import Prism from "prismjs";
+// import "./prism.css";
+// import Prism from "./prism.js";
 import { useEffect, useContext } from "react";
 import { DataContext } from "../../context/DataContext";
+import SyntaxHighlighter from "react-syntax-highlighter";
 import {
   dracula,
   docco,
   colorBrewer,
   a11yDark,
+  atomOneDark,
 } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { useState } from "react";
 export default ({ data, state, index, onClick, lang, group }) => {
@@ -194,6 +195,13 @@ function Syntax({ syntax }) {
   );
 }
 
+// function CodeBlock({ code, langType }) {
+//   return (
+//     <pre>
+//       <code className={"language-" + langType}>{code}</code>
+//     </pre>
+//   );
+// }
 function CodeBlock({ code, langType }) {
   return (
     <pre>
@@ -201,7 +209,7 @@ function CodeBlock({ code, langType }) {
         <SyntaxHighlighter
           className=".code"
           language={langType}
-          style={dracula}
+          style={atomOneDark}
           wrapLines={true}
           customStyle={{
             backgroundColor: "rgb(44, 44, 44)",

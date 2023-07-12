@@ -28,10 +28,31 @@ export default ({ children }) => {
     // { data: [], type: "java" },
   ];
   let [methods, setMethods] = useState([]);
+  let [w3Lang, setW3Lang] = useState([]);
+  let [w3Data, setW3Data] = useState([]);
+  let [w3Head, setW3Head] = useState([]);
+  let [w3SubHead, setW3SubHead] = useState([]);
+  let [w3Item, setW3Item] = useState([]);
   let [langType, setLangType] = useState("");
   return (
     <DataContext.Provider
-      value={{ setMethods, methods, data, setLangType, langType }}
+      value={{
+        setMethods,
+        methods,
+        data,
+        setLangType,
+        langType,
+        w3Lang,
+        setW3Lang,
+        w3Data,
+        setW3Data,
+        w3Head,
+        setW3Head,
+        w3SubHead,
+        setW3SubHead,
+        w3Item,
+        setW3Item,
+      }}
     >
       {children}
     </DataContext.Provider>
